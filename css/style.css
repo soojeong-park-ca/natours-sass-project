@@ -8,10 +8,12 @@ Dark green: #28b485
 */
 
 /* RESET */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
@@ -21,12 +23,17 @@ Dark green: #28b485
 }
 
 body {
+  box-sizing: border-box;
+
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+
+  /* padding: 30px; */
+  padding: 1.875em;
+  /* ems can be useful if I want to define certain properties of an element (like padding) relative to its own font size */
 }
 
 .header {
@@ -45,7 +52,7 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
@@ -53,11 +60,11 @@ body {
   height: 2.2rem;
 }
 
-.logo {
+.header__logo {
   height: 100%;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -73,7 +80,7 @@ body {
   margin-bottom: 60px;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 3.75rem;
   font-weight: 400;
@@ -83,7 +90,7 @@ body {
   animation: moveInFromLeft 1s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 1.25rem;
   font-weight: 700;
@@ -100,7 +107,7 @@ body {
 
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 10rem;
+  border-radius: 100px;
   transition: all 0.2s;
 
   padding: 14px 40px;
@@ -114,12 +121,12 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background: #fff;
   color: #777;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInFromBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
@@ -131,7 +138,7 @@ body {
 
   width: 100%;
   height: 100%;
-  border-radius: 10rem;
+  border-radius: 100px;
   top: 0;
   left: 0;
   transition: all 0.4s;
@@ -143,7 +150,7 @@ body {
   opacity: 0;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
