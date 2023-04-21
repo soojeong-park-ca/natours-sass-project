@@ -1,0 +1,39 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color-grey-dark;
+
+  /* padding: 30px; */
+  padding: 1.875em;
+  /* ems can be useful if I want to define certain properties of an element (like padding) relative to its own font size */
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+
+  margin-bottom: 60px;
+
+  &--main {
+    display: block;
+    font-size: 3.75rem;
+    font-weight: 400;
+    letter-spacing: 35px;
+    padding-left: 35px;
+
+    animation: moveInFromLeft 1s ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    padding-left: 17.4px;
+
+    animation: moveInFromRight 1s ease-out;
+  }
+}
