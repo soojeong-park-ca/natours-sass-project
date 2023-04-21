@@ -1,17 +1,18 @@
+@use "../abstracts/variables";
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
-  color: $color-grey-dark;
+  color: variables.$color-grey-dark;
 
-  /* padding: 30px; */
-  padding: 1.875em;
+  padding: 1.875em; // padding: 30px;
   /* ems can be useful if I want to define certain properties of an element (like padding) relative to its own font size */
 }
 
 .heading-primary {
-  color: $color-white;
+  color: variables.$color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
 
