@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as v;
 
 .btn {
   &:link,
@@ -6,6 +6,7 @@
     display: inline-block;
     position: relative;
 
+    font-size: v.$font-size-default;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 100px;
@@ -16,7 +17,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(variables.$color-black, 0.2);
+    box-shadow: 0 10px 20px rgba(v.$color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -26,15 +27,15 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(variables.$color-black, 0.2);
+    box-shadow: 0 5px 10px rgba(v.$color-black, 0.2);
   }
 
   &--white {
-    background: variables.$color-white;
-    color: variables.$color-grey-dark;
+    background: v.$color-white;
+    color: v.$color-grey-dark;
 
     &::after {
-      background-color: variables.$color-white;
+      background-color: v.$color-white;
     }
   }
 
@@ -56,5 +57,30 @@
     transition: all 0.4s;
 
     z-index: -1;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: v.$font-size-default;
+    color: v.$color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid v.$color-primary;
+    padding: 3px 6px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    box-shadow: 0 10px 20px rgba(v.$color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 5px 10px rgba(v.$color-black, 0.15);
+    transform: translateY(0);
   }
 }

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as v;
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: v.$font-size-15;
+}
+.u-margin-bottom-medium {
+  margin-bottom: v.$font-size-40;
+}
+.u-margin-bottom-big {
+  margin-bottom: v.$font-size-80;
+}

@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as v;
 
 .header {
   position: relative;
@@ -6,8 +6,8 @@
 
   background-image: linear-gradient(
       to right bottom,
-      rgba(variables.$color-primary-light, 0.8),
-      rgba(variables.$color-primary-dark, 0.8)
+      rgba(v.$color-primary-light, 0.8),
+      rgba(v.$color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -20,7 +20,7 @@
     top: 40px;
     left: 40px;
 
-    height: 2.2rem;
+    height: v.$font-size-35;
   }
 
   &__logo {
