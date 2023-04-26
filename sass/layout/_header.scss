@@ -17,10 +17,10 @@
 
   &__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: v.$font-size-10 * 4;
+    left: v.$font-size-10 * 4;
 
-    height: v.$font-size-35;
+    height: v.$font-size-10 * 3.5;
   }
 
   &__logo {

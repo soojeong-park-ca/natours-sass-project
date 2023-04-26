@@ -1,6 +1,8 @@
 @use "../abstracts/variables" as v;
 
 .btn {
+  z-index: 0;
+
   &:link,
   &:visited {
     display: inline-block;
@@ -10,14 +12,14 @@
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 100px;
-    transition: all 0.2s;
+    transition: all 0.3s;
 
-    padding: 14px 40px;
+    padding: v.$font-size-10 * 1.4 v.$font-size-10 * 4;
   }
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(v.$color-black, 0.2);
+    box-shadow: 0 v.$font-size-10 v.$font-size-10 * 2 rgba(v.$color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -27,7 +29,8 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(v.$color-black, 0.2);
+    box-shadow: 0 calc(v.$font-size-10 / 2) v.$font-size-10
+      rgba(v.$color-black, 0.2);
   }
 
   &--white {
@@ -36,6 +39,15 @@
 
     &::after {
       background-color: v.$color-white;
+    }
+  }
+
+  &--green {
+    background: v.$color-primary;
+    color: v.$color-white;
+
+    &::after {
+      background-color: v.$color-primary;
     }
   }
 
@@ -75,12 +87,13 @@
   &:hover {
     background-color: v.$color-primary;
     color: v.$color-white;
-    box-shadow: 0 10px 20px rgba(v.$color-black, 0.15);
+    box-shadow: 0 v.$font-size-10 v.$font-size-10 * 2 rgba(v.$color-black, 0.15);
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 5px 10px rgba(v.$color-black, 0.15);
+    box-shadow: 0 calc(v.$font-size-10 / 2) v.$font-size-10
+      rgba(v.$color-black, 0.15);
     transform: translateY(0);
   }
 }

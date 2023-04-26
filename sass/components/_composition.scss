@@ -5,7 +5,8 @@
 
   &__photo {
     width: 55%;
-    box-shadow: 0 15px 40px rgba(v.$color-black, 0.4);
+    box-shadow: 0 v.$font-size-10 * 1.5 v.$font-size-10 * 4
+      rgba(v.$color-black, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: 10;
@@ -14,21 +15,22 @@
 
     &--p1 {
       left: 0;
-      top: -#{v.$font-size-20};
+      top: -#{v.$font-size-10 * 2};
     }
     &--p2 {
       right: 0;
-      top: v.$font-size-20;
+      top: v.$font-size-10 * 2;
     }
     &--p3 {
       left: 20%;
-      top: 6.25rem;
+      top: v.$font-size-10 * 10;
     }
 
     &:hover {
       outline: 15px solid v.$color-primary;
       transform: scale(1.05) translateY((-5px));
-      box-shadow: 0 25px 40px rgba(v.$color-black, 0.5);
+      box-shadow: 0 v.$font-size-10 * 2.5 v.$font-size-10 * 4
+        rgba(v.$color-black, 0.5);
       border-radius: 0;
       z-index: 20;
     }

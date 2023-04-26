@@ -1,11 +1,13 @@
+@use "../abstracts/variables" as v;
+
 @keyframes moveInFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(v.$font-size-10 * -10);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(v.$font-size-10);
   }
 
   100% {
@@ -17,11 +19,11 @@
 @keyframes moveInFromRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(v.$font-size-10 * 10);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-#{v.$font-size-10});
   }
 
   100% {
@@ -33,7 +35,7 @@
 @keyframes moveInFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(v.$font-size-10 * 3);
   }
 
   100% {

@@ -4,12 +4,19 @@
   text-align: center;
 }
 
+.u-margin-top-big {
+  margin-bottom: v.$font-size-10 * 8;
+}
+.u-margin-top-huge {
+  margin-bottom: v.$font-size-10 * 10;
+}
+
 .u-margin-bottom-small {
-  margin-bottom: v.$font-size-15;
+  margin-bottom: v.$font-size-10 * 1.5;
 }
 .u-margin-bottom-medium {
-  margin-bottom: v.$font-size-40;
+  margin-bottom: v.$font-size-10 * 4;
 }
 .u-margin-bottom-big {
-  margin-bottom: v.$font-size-80;
+  margin-bottom: v.$font-size-10 * 8;
 }
