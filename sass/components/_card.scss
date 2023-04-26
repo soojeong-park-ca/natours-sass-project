@@ -18,7 +18,7 @@
     box-shadow: 0 v.$font-size-10 * 1.5 v.$font-size-10 * 4
       rgba(v.$color-black, 0.15);
     backface-visibility: hidden;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
 
     &--front {
       background-color: v.$color-white;
