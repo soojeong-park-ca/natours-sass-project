@@ -117,7 +117,7 @@ body {
 }
 
 .u-margin-top-huge {
-  margin-bottom: 6.25rem;
+  margin-top: 6.25rem;
 }
 
 .u-margin-bottom-small {
@@ -390,47 +390,26 @@ body {
   margin: 0 auto;
 }
 
-.row {
+.grid {
   max-width: 71.25rem;
+  display: grid;
+  -moz-column-gap: 3.75rem;
+       column-gap: 3.75rem;
+  align-items: flex-start;
+  justify-content: center;
   margin: 0 auto;
 }
-.row:not(:last-child) {
-  margin-bottom: 5rem;
+
+.grid-col-2 {
+  grid-template-columns: 1fr 1fr;
 }
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
-.row [class^=col-] {
-  float: left;
-}
-.row [class^=col-]:not(:last-child) {
-  margin-right: 3.75rem;
-}
-.row .col-1-of-2 {
-  width: calc((100% - 3.75rem) / 2);
-}
-.row .col-1-of-3 {
-  width: calc((100% - 2 * 3.75rem) / 3);
-}
-.row .col-1-of-4 {
-  width: calc((100% - 3 * 3.75rem) / 4);
-}
-.row .col-2-of-3 {
-  width: calc(
-      2 * ((100% - 2 * 3.75rem) / 3) + 3.75rem
-    );
-}
-.row .col-2-of-4 {
-  width: calc(
-      2 * ((100% - 3 * 3.75rem) / 4) + 3.75rem
-    );
-}
-.row .col-3-of-4 {
-  width: calc(
-      3 * ((100% - 3 * 3.75rem) / 4) + 2 * 3.75rem
-    );
+
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .header {

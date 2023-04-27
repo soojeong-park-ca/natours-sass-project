@@ -1,51 +1,21 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins";
 
-.row {
+.grid {
   max-width: v.$grid-width;
+  display: grid;
+  column-gap: v.$gutter-horizontal;
+  align-items: flex-start;
+  justify-content: center;
   margin: 0 auto;
+}
 
-  &:not(:last-child) {
-    margin-bottom: v.$gutter-vertical;
-  }
-
-  @include mixins.clearfix;
-
-  [class^="col-"] {
-    float: left;
-
-    &:not(:last-child) {
-      margin-right: v.$gutter-horizontal;
-    }
-  }
-
-  .col-1-of-2 {
-    width: calc((100% - #{v.$gutter-horizontal}) / 2);
-  }
-
-  .col-1-of-3 {
-    width: calc((100% - 2 * #{v.$gutter-horizontal}) / 3);
-  }
-
-  .col-1-of-4 {
-    width: calc((100% - 3 * #{v.$gutter-horizontal}) / 4);
-  }
-
-  .col-2-of-3 {
-    width: calc(
-      2 * ((100% - 2 * #{v.$gutter-horizontal}) / 3) + #{v.$gutter-horizontal}
-    );
-  }
-
-  .col-2-of-4 {
-    width: calc(
-      2 * ((100% - 3 * #{v.$gutter-horizontal}) / 4) + #{v.$gutter-horizontal}
-    );
-  }
-
-  .col-3-of-4 {
-    width: calc(
-      3 * ((100% - 3 * #{v.$gutter-horizontal}) / 4) + 2 * #{v.$gutter-horizontal}
-    );
-  }
+.grid-col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
