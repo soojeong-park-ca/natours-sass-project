@@ -1,6 +1,6 @@
-# Natour
+# Natours
 
-This is a landing page website for a fictional tour company called "Natour"
+This is a landing page website for a fictional tour company called "Natours"
 
 ## Table of contents
 
@@ -39,7 +39,7 @@ mobile version :
 
 ### Motivation
 
-Natour is originally designed by Jonas Schmedtmann from his [Advanced CSS and SASS course](https://www.udemy.com/course/advanced-css-and-sass/). I changed parts of his design and added extra features to the website for my first ever personal SASS project.
+Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and SASS course](https://www.udemy.com/course/advanced-css-and-sass/). I changed parts of his design and added extra features to the website for my first ever personal SASS project.
 
 ### Tech Framework Used
 
