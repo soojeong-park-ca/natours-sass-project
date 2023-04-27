@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as v;
+
+.story {
+  width: 75%;
+  box-shadow: 0 v.$px10 * 3 v.$px10 * 6;
+  margin: 0 auto;
+}

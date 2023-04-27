@@ -3,11 +3,11 @@
 @keyframes moveInFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(v.$font-size-10 * -10);
+    transform: translateX(v.$px10 * -10);
   }
 
   80% {
-    transform: translateX(v.$font-size-10);
+    transform: translateX(v.$px10);
   }
 
   100% {
@@ -19,11 +19,11 @@
 @keyframes moveInFromRight {
   0% {
     opacity: 0;
-    transform: translateX(v.$font-size-10 * 10);
+    transform: translateX(v.$px10 * 10);
   }
 
   80% {
-    transform: translateX(-#{v.$font-size-10});
+    transform: translateX(-#{v.$px10});
   }
 
   100% {
@@ -35,7 +35,7 @@
 @keyframes moveInFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(v.$font-size-10 * 3);
+    transform: translateY(v.$px10 * 3);
   }
 
   100% {

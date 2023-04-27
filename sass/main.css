@@ -381,6 +381,12 @@ body {
   transform: translateY(-0.9375rem) scale(1.03);
 }
 
+.story {
+  width: 75%;
+  box-shadow: 0 1.875rem 3.75rem;
+  margin: 0 auto;
+}
+
 .row {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -482,4 +488,9 @@ body {
   background-color: #f7f7f7;
   padding: 15.625rem 0 9.375rem 0;
   margin-top: -5.625rem;
+}
+
+.section-stories {
+  background-color: #f7f7f7;
+  padding: 9.375rem 0;
 }/*# sourceMappingURL=main.css.map */

@@ -2,21 +2,20 @@
 
 .card {
   // FUNCTIONALITY
-  perspective: v.$font-size-10 * 150;
+  perspective: v.$px10 * 150;
   position: relative;
-  height: v.$font-size-10 * 52;
+  height: v.$px10 * 52;
 
   &__side {
     width: 100%;
-    height: v.$font-size-10 * 52;
+    height: v.$px10 * 52;
     position: absolute;
     top: 0;
     left: 0;
 
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 v.$font-size-10 * 1.5 v.$font-size-10 * 4
-      rgba(v.$color-black, 0.15);
+    box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.15);
     backface-visibility: hidden;
     transition: all 0.8s ease;
 
@@ -60,7 +59,7 @@
 
   // FRONT SIDE STYLING
   &__picture {
-    height: v.$font-size-10 * 23;
+    height: v.$px10 * 23;
     background-size: cover;
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -93,11 +92,11 @@
 
   &__heading {
     position: absolute;
-    top: v.$font-size-10 * 12;
-    right: v.$font-size-10 * 2;
+    top: v.$px10 * 12;
+    right: v.$px10 * 2;
     width: 70%;
 
-    font-size: v.$font-size-10 * 2.8;
+    font-size: v.$px10 * 2.8;
     font-weight: 300;
     text-transform: uppercase;
     color: v.$color-white;
@@ -105,7 +104,7 @@
   }
 
   &__heading-span {
-    padding: v.$font-size-10 v.$font-size-10 * 1.5;
+    padding: v.$px10 v.$px10 * 1.5;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
@@ -133,7 +132,7 @@
   }
 
   &__details {
-    padding: v.$font-size-10 * 3;
+    padding: v.$px10 * 3;
 
     ul {
       width: 80%;
@@ -142,8 +141,8 @@
 
       li {
         text-align: center;
-        font-size: v.$font-size-10 * 1.5;
-        padding: v.$font-size-10;
+        font-size: v.$px10 * 1.5;
+        padding: v.$px10;
 
         &:not(:last-child) {
           border-bottom: 1px solid v.$color-grey-light-2;
@@ -164,14 +163,14 @@
   &__price-box {
     color: v.$color-white;
     text-align: center;
-    margin-bottom: v.$font-size-10 * 8;
+    margin-bottom: v.$px10 * 8;
   }
   &__price-only {
-    font-size: v.$font-size-10 * 1.4;
+    font-size: v.$px10 * 1.4;
     text-transform: uppercase;
   }
   &__price-value {
-    font-size: v.$font-size-10 * 6;
+    font-size: v.$px10 * 6;
     font-weight: 100;
   }
 }

@@ -14,12 +14,12 @@
     border-radius: 100px;
     transition: all 0.3s;
 
-    padding: v.$font-size-10 * 1.4 v.$font-size-10 * 4;
+    padding: v.$px10 * 1.4 v.$px10 * 4;
   }
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 v.$font-size-10 v.$font-size-10 * 2 rgba(v.$color-black, 0.2);
+    box-shadow: 0 v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -29,8 +29,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 calc(v.$font-size-10 / 2) v.$font-size-10
-      rgba(v.$color-black, 0.2);
+    box-shadow: 0 calc(v.$px10 / 2) v.$px10 rgba(v.$color-black, 0.2);
   }
 
   &--white {
@@ -87,13 +86,12 @@
   &:hover {
     background-color: v.$color-primary;
     color: v.$color-white;
-    box-shadow: 0 v.$font-size-10 v.$font-size-10 * 2 rgba(v.$color-black, 0.15);
+    box-shadow: 0 v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.15);
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 calc(v.$font-size-10 / 2) v.$font-size-10
-      rgba(v.$color-black, 0.15);
+    box-shadow: 0 calc(v.$px10 / 2) v.$px10 rgba(v.$color-black, 0.15);
     transform: translateY(0);
   }
 }

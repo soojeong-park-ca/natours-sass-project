@@ -7,7 +7,7 @@ body {
   line-height: 1.7;
   color: v.$color-grey-dark;
 
-  padding: v.$font-size-10 * 3;
+  padding: v.$px10 * 3;
 }
 
 .heading-primary {
@@ -15,31 +15,31 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
 
-  margin-bottom: v.$font-size-10 * 6;
+  margin-bottom: v.$px10 * 6;
 
   &--main {
     display: block;
-    font-size: v.$font-size-10 * 6;
+    font-size: v.$px10 * 6;
     font-weight: 400;
-    letter-spacing: v.$font-size-10 * 3.5;
-    padding-left: v.$font-size-10 * 3.5;
+    letter-spacing: v.$px10 * 3.5;
+    padding-left: v.$px10 * 3.5;
 
     animation: moveInFromLeft 1s ease-out;
   }
 
   &--sub {
     display: block;
-    font-size: v.$font-size-10 * 2;
+    font-size: v.$px10 * 2;
     font-weight: 700;
-    letter-spacing: v.$font-size-10 * 1.7;
-    padding-left: v.$font-size-10 * 1.7;
+    letter-spacing: v.$px10 * 1.7;
+    padding-left: v.$px10 * 1.7;
 
     animation: moveInFromRight 1s ease-out;
   }
 }
 
 .heading-secondary {
-  font-size: v.$font-size-10 * 3.5;
+  font-size: v.$px10 * 3.5;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -56,8 +56,7 @@ body {
 
   &:hover {
     transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: calc(v.$font-size-10 / 2) v.$font-size-10 v.$font-size-10 * 2
-      rgba(v.$color-black, 0.2);
+    text-shadow: calc(v.$px10 / 2) v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.2);
   }
 }
 
@@ -71,6 +70,6 @@ body {
   font-size: v.$font-size-default;
 
   &:not(:last-child) {
-    margin-bottom: v.$font-size-10 * 3;
+    margin-bottom: v.$px10 * 3;
   }
 }

@@ -2,7 +2,7 @@
 
 .section-about {
   background-color: v.$color-grey-light-1;
-  padding: v.$font-size-10 * 25 0;
+  padding: v.$px10 * 25 0;
   margin-top: -20vh;
 }
 
@@ -10,8 +10,8 @@
   position: relative;
   transform: skewY(-7deg);
 
-  padding: v.$font-size-10 * 20 0;
-  margin-top: -#{v.$font-size-10 * 9};
+  padding: v.$px10 * 20 0;
+  margin-top: -#{v.$px10 * 9};
 
   & > * {
     transform: skewY(7deg);
@@ -39,6 +39,11 @@
 
 .section-tours {
   background-color: v.$color-grey-light-1;
-  padding: v.$font-size-10 * 25 0 v.$font-size-10 * 15 0;
-  margin-top: -#{v.$font-size-10 * 9};
+  padding: v.$px10 * 25 0 v.$px10 * 15 0;
+  margin-top: -#{v.$px10 * 9};
+}
+
+.section-stories {
+  background-color: v.$color-grey-light-1;
+  padding: v.$px10 * 15 0;
 }

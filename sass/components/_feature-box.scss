@@ -2,17 +2,16 @@
 
 .feature-box {
   background-color: rgba(v.$color-white, 0.8);
-  font-size: v.$font-size-10 * 1.5;
-  padding: v.$font-size-10 * 2.5;
+  font-size: v.$px10 * 1.5;
+  padding: v.$px10 * 2.5;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 v.$font-size-10 * 1.5 v.$font-size-10 * 4
-    rgba(v.$color-black, 0.15);
+  box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.15);
   transition: transform 0.3s;
 
   &__icon {
-    font-size: v.$font-size-10 * 6;
-    margin-block: v.$font-size-10 * 1.5 v.$font-size-10 * 2.5;
+    font-size: v.$px10 * 6;
+    margin-block: v.$px10 * 1.5 v.$px10 * 2.5;
     display: inline-block;
     background-image: linear-gradient(
       to right,
@@ -25,6 +24,6 @@
   }
 
   &:hover {
-    transform: translateY(-#{v.$font-size-10 * 1.5}) scale(1.03);
+    transform: translateY(-#{v.$px10 * 1.5}) scale(1.03);
   }
 }
