@@ -383,7 +383,10 @@ body {
 
 .story {
   width: 75%;
-  box-shadow: 0 1.875rem 3.75rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1.875rem 3.75rem rgba(0, 0, 0, 0.1);
+  padding: 3.75rem;
   margin: 0 auto;
 }
 
