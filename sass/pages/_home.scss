@@ -39,11 +39,11 @@
 
 .section-tours {
   background-color: v.$color-grey-light-1;
-  padding: v.$px10 * 25 0 v.$px10 * 15 0;
+  padding: v.$px10 * 25 0 v.$px10 * 7 0;
   margin-top: -#{v.$px10 * 9};
 }
 
 .section-stories {
-  background-color: v.$color-grey-light-1;
+  position: relative;
   padding: v.$px10 * 15 0;
 }

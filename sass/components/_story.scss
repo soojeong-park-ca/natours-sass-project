@@ -1,12 +1,9 @@
 @use "../abstracts/variables" as v;
 
 .story-container {
-  height: v.$px10 * 45;
-  display: flex;
-  gap: v.$gutter-horizontal;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .story {
@@ -14,7 +11,7 @@
   height: 100%;
 
   font-size: v.$font-size-default;
-  background-color: v.$color-white;
+  background-color: rgba(v.$color-white, 0.6);
   border-radius: 3px;
   box-shadow: 0 v.$px10 * 3 v.$px10 * 6 rgba(v.$color-black, 0.1);
 
@@ -74,4 +71,27 @@
     filter: blur(3px) brightness(0.9);
     transform: translate(-50%, -50%) scale(1);
   }
+}
+
+.btn--story {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  color: rgba(v.$color-primary, 0.8);
+
+  cursor: pointer;
+}
+
+.btn--prev {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translate(-7%, -50%);
+}
+.btn--next {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translate(-7%, -50%);
 }
