@@ -21,13 +21,14 @@ This is a landing page website for a fictional tour company called "Natours"
 Some features from the website/app :
 
 - Structuring SASS files using `7-1 Pattern`;
-- Using `reusable CSS Grid` with different number of columns to organize contents;
-- Using `<figure>` HTML tag and `shape-outside`, `clip-path` CSS properties to have text content float around an image;
-- Rotating cards for different tour products using `transform: rotate()` and `backface-visibility: hidden`;
+- Using **`reusable CSS Grid`** with different number of columns to organize contents;
+- Using **`<figure>`** HTML tag and **`shape-outside`**, **`clip-path`** CSS properties to have text content float around an image;
+- **Rotating cards** for different tour products using **`transform: rotate()`** and `backface-visibility: hidden`;
+- video element as a background image for a section;
 
 ### Screenshots
 
-mobile version :
+desktop version :
 
 <img src="" width="250"/>
 
@@ -45,6 +46,7 @@ Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and S
 
 - HTML
 - SASS (SCSS)
+- Vanilla JavaScript
 
 ### Reflection
 
@@ -54,9 +56,10 @@ One of the challenges I ran into was making the score system work. It required m
 
 Some new things I learned while building this website/app are:
 
-- `<figure>` HTML element & using it with `float`
-- CSS properties: `clip-path` | `background-clip` | `transform: skew()` | `shape-outside` | `something-else`
-- CSS functions: `circle(<shape-radius> at <position>)` |
+- Using the modern **`:focus-visible`** pseudo-element to style focus outlines while keeping accessibility in mind
+- HTML elements: **`<figure>`** & using it with `float` | `<video>` & `<source>` |
+- CSS properties: **`clip-path`** | **`background-clip`** | **`transform: skew()`** | **`shape-outside`** | **`something-else`**
+- CSS functions: **`circle(<shape-radius> at <position>)`** |
 
 I look forward to ...
 

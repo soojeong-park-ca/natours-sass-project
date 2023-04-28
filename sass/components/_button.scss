@@ -3,6 +3,7 @@
 .btn {
   z-index: 0;
 
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -15,6 +16,10 @@
     transition: all 0.3s;
 
     padding: v.$px10 * 1.4 v.$px10 * 4;
+
+    // STYLE FOR <button> ELEMENT
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -34,7 +39,7 @@
 
   &--white {
     background: v.$color-white;
-    color: v.$color-grey-dark;
+    color: v.$color-grey-dark-1;
 
     &::after {
       background-color: v.$color-white;

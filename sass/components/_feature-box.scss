@@ -5,7 +5,7 @@
   font-size: v.$px10 * 1.5;
   padding: v.$px10 * 2.5;
   text-align: center;
-  border-radius: 3px;
+  border-radius: v.$border-radius-small;
   box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.15);
   transition: transform 0.3s;
 

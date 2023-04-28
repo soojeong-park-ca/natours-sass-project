@@ -47,3 +47,35 @@
   position: relative;
   padding: v.$px10 * 15 0;
 }
+
+.section-book {
+  padding: v.$px10 * 15 0;
+  background-image: linear-gradient(
+    to right bottom,
+    v.$color-primary-light,
+    v.$color-primary-dark
+  );
+}
+.book-container {
+  max-width: v.$px10 * 114;
+  margin: 0 auto;
+}
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(v.$color-white, 0.9) 0% 49.9%,
+      transparent 50% 100%
+    ),
+    url(../../img/nat-10.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: v.$border-radius-small;
+  box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.2);
+
+  // height: v.$px10 * 50;
+
+  &__form {
+    width: 50%;
+    padding: v.$px10 * 6;
+  }
+}

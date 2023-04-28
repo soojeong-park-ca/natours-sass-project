@@ -2,6 +2,7 @@
 
 .story-container {
   position: relative;
+  max-width: v.$px10 * 130;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -12,7 +13,7 @@
 
   font-size: v.$font-size-default;
   background-color: rgba(v.$color-white, 0.6);
-  border-radius: 3px;
+  border-radius: v.$border-radius-small;
   box-shadow: 0 v.$px10 * 3 v.$px10 * 6 rgba(v.$color-black, 0.1);
 
   padding: v.$px10 * 6;
