@@ -1,7 +1,17 @@
 @use "../abstracts/variables" as v;
 
+.story-container {
+  height: v.$px10 * 45;
+  display: flex;
+  gap: v.$gutter-horizontal;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 .story {
   width: 75%;
+  height: 100%;
 
   font-size: v.$font-size-default;
   background-color: v.$color-white;
@@ -9,7 +19,7 @@
   box-shadow: 0 v.$px10 * 3 v.$px10 * 6 rgba(v.$color-black, 0.1);
 
   padding: v.$px10 * 6;
-  padding: v.$px10 * 9;
+  padding-left: v.$px10 * 9;
   margin: 0 auto;
   transform: skewX(-12deg);
   position: relative;
