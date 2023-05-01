@@ -1,3 +1,4 @@
+// STORIES SLIDER
 let slideIndex = 1;
 showSlide(slideIndex);
 
@@ -14,7 +15,7 @@ function prevSlide() {
 prevBtn.addEventListener("click", prevSlide);
 
 function showSlide(n) {
-  const stories = document.getElementsByClassName("story");
+  const stories = document.querySelectorAll(".story");
 
   if (n > stories.length) {
     slideIndex = 1;
@@ -30,3 +31,13 @@ function showSlide(n) {
 
   stories[slideIndex - 1].style.display = "block";
 }
+
+// NAVIGATION
+const navCheckbox = document.querySelector(".navigation__checkbox");
+const navLinks = document.querySelectorAll(".navigation__link");
+
+function hideNav() {
+  navCheckbox.checked = false;
+}
+
+navLinks.forEach(link => link.addEventListener("click", hideNav));

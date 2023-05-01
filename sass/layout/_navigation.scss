@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.navigation {
+  &__checkbox {
+    appearance: none;
+    position: fixed;
+    top: v.$px10 * 3;
+    right: v.$px10 * 3;
+  }
+
+  &__button {
+    height: v.$px10 * 7;
+    width: v.$px10 * 7;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: v.$px10 * 6;
+    right: v.$px10 * 6;
+    background-color: v.$color-white;
+    box-shadow: 0 v.$px10 v.$px10 * 3 rgba(v.$color-black, 0.1);
+
+    transition: all 0.2s;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  &__background {
+    height: v.$px10 * 6;
+    width: v.$px10 * 6;
+    border-radius: 50%;
+
+    position: fixed;
+    top: v.$px10 * 6.5;
+    right: v.$px10 * 6.5;
+    background-image: radial-gradient(
+      v.$color-primary-light,
+      v.$color-primary-dark
+    );
+
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    z-index: 1000;
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    width: 0;
+
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: v.$px10;
+
+    @include m.absoluteCenter;
+    list-style: none;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+
+      text-decoration: none;
+      font-size: v.$px10 * 3;
+      font-weight: 300;
+      color: v.$color-white;
+      text-transform: uppercase;
+
+      background-image: linear-gradient(
+        120deg,
+        transparent 0% 49.99%,
+        v.$color-white 50% 100%
+      );
+      background-size: 225%;
+
+      padding: v.$px10 v.$px10 * 2;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: v.$color-primary;
+      transform: translateX(v.$px10);
+    }
+  }
+
+  // FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  // ICON
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: v.$px10 * 3;
+      height: 3px;
+
+      background-color: v.$color-grey-dark-1;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -#{v.$px10 * 0.8};
+    }
+    &::after {
+      top: v.$px10 * 0.8;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -#{v.$px10};
+  }
+  &__button:hover &__icon::after {
+    top: v.$px10;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+}
