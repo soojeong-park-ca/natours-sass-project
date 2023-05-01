@@ -41,3 +41,32 @@ function hideNav() {
 }
 
 navLinks.forEach(link => link.addEventListener("click", hideNav));
+
+// TOURS SECTION POPUP
+const btnTours = document.querySelectorAll(".btn-tours");
+const popup = document.querySelector(".popup");
+const popupContent = document.querySelector(".popup__content");
+const btnPopupClose = document.querySelector(".popup__close");
+const btnPopupBook = document.querySelector(".btn-popup-book");
+
+function openPopup() {
+  popup.classList.remove("hidden");
+}
+
+function closePopup() {
+  popup.classList.add("hidden");
+}
+
+btnTours.forEach(btn => btn.addEventListener("click", openPopup));
+
+btnPopupClose.addEventListener("click", closePopup);
+
+btnPopupBook.addEventListener("click", closePopup);
+
+popup.addEventListener("click", function (e) {
+  e.target === popup && closePopup();
+});
+
+window.addEventListener("keydown", function (e) {
+  e.key === "Escape" && closePopup();
+});

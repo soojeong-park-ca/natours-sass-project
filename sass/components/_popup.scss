@@ -9,8 +9,10 @@
   top: 0;
   left: 0;
 
-  background-color: rgba(v.$color-black, 0.3);
+  background-color: rgba(v.$color-black, 0.8);
   z-index: 3000;
+
+  transition: all 0.3s;
 
   &__content {
     @include m.absoluteCenter;
@@ -23,6 +25,10 @@
     background-color: v.$color-white;
     box-shadow: 0 v.$px10 * 2 v.$px10 * 4 rgba(v.$color-black, 0.2);
     overflow: hidden;
+
+    position: relative;
+
+    transition: all 0.4s 0.2s;
   }
 
   &__left {
@@ -52,5 +58,27 @@
 
     -webkit-hyphens: auto;
     hyphens: auto;
+  }
+
+  &__close {
+    display: inline-block;
+
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: v.$px10 * 2;
+    line-height: 1;
+    color: v.$color-grey-dark-3;
+    position: absolute;
+    top: v.$px10 * 3;
+    right: v.$px10 * 3;
+    transition: all 0.2s;
+
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: v.$color-primary;
+    }
   }
 }
