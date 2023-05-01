@@ -1,0 +1,56 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.popup {
+  height: 100vh;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(v.$color-black, 0.3);
+  z-index: 3000;
+
+  &__content {
+    @include m.absoluteCenter;
+    width: 75%;
+    height: max-content;
+
+    display: flex;
+
+    border-radius: 3px;
+    background-color: v.$color-white;
+    box-shadow: 0 v.$px10 * 2 v.$px10 * 4 rgba(v.$color-black, 0.2);
+    overflow: hidden;
+  }
+
+  &__left {
+    width: 33%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__right {
+    width: 67%;
+    padding: v.$px10 * 3 v.$px10 * 5;
+  }
+
+  &__img {
+    height: 50%;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: v.$px10 * 1.4;
+    margin-bottom: v.$px10 * 4;
+
+    column-count: 2;
+    column-gap: v.$px10 * 4;
+    column-rule: 1px solid v.$color-grey-light-2;
+
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
