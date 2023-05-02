@@ -1,13 +1,6 @@
 @use "../abstracts/variables" as v;
-
-.grid {
-  max-width: v.$grid-width;
-  display: grid;
-  column-gap: v.$gutter-horizontal;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 0 auto;
-}
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 
 .grid-col-2 {
   grid-template-columns: 1fr 1fr;
@@ -17,4 +10,19 @@
 }
 .grid-col-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid {
+  // max-width: v.$grid-width;
+  width: #{f.fluid(260px, 1500px, 280px, 1920px)};
+  display: grid;
+  column-gap: v.$gutter-horizontal;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+
+  @include m.respondMax(v.$screen-medium) {
+    grid-template-columns: 1fr;
+    row-gap: v.$gutter-vertical;
+  }
 }

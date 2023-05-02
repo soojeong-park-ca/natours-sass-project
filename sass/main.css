@@ -776,16 +776,6 @@ body {
   padding-top: 0.9375rem;
 }
 
-.grid {
-  max-width: 71.25rem;
-  display: grid;
-  -moz-column-gap: 3.75rem;
-       column-gap: 3.75rem;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 0 auto;
-}
-
 .grid-col-2 {
   grid-template-columns: 1fr 1fr;
 }
@@ -796,6 +786,22 @@ body {
 
 .grid-col-4 {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid {
+  width: clamp( 16.25rem, 75.6097560976vw + 3.0182926829rem, 93.75rem );
+  display: grid;
+  -moz-column-gap: 3.75rem;
+       column-gap: 3.75rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+@media (max-width: 75em) {
+  .grid {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
 }
 
 .header {
