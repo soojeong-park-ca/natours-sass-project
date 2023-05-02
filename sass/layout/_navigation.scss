@@ -20,14 +20,27 @@
     justify-content: center;
 
     position: fixed;
-    top: f.rem(60px);
-    right: f.rem(60px);
+    top: f.rem(70px);
+    right: f.rem(70px);
     background-color: v.$color-white;
     box-shadow: 0 f.rem(10px) f.rem(30px) rgba(v.$color-black, 0.1);
 
     transition: all 0.2s;
     cursor: pointer;
     z-index: 2000;
+
+    @include m.respondMax(v.$screen-small) {
+      top: f.rem(40px);
+      right: f.rem(40px);
+    }
+
+    @include m.respondMax(v.$screen-smallest) {
+      height: f.rem(60px);
+      width: f.rem(60px);
+
+      top: f.rem(20px);
+      right: f.rem(20px);
+    }
   }
 
   &__background {
@@ -36,8 +49,8 @@
     border-radius: 50%;
 
     position: fixed;
-    top: f.rem(65px);
-    right: f.rem(65px);
+    top: f.rem(75px);
+    right: f.rem(75px);
     background-image: radial-gradient(
       v.$color-primary-light,
       v.$color-primary-dark
@@ -45,6 +58,19 @@
 
     transition: transform 0.4s cubic-bezier(0.83, 0, 0.17, 1);
     z-index: 1000;
+
+    @include m.respondMax(v.$screen-small) {
+      top: f.rem(45px);
+      right: f.rem(45px);
+    }
+
+    @include m.respondMax(v.$screen-smallest) {
+      height: f.rem(50px);
+      width: f.rem(50px);
+
+      top: f.rem(25px);
+      right: f.rem(25px);
+    }
   }
 
   &__nav {

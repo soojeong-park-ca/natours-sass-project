@@ -28,6 +28,13 @@
     left: f.rem(40px);
 
     height: f.rem(35px);
+
+    @include m.respondMax(v.$screen-smallest) {
+      height: f.rem(25px);
+
+      top: f.rem(25px);
+      left: f.rem(25px);
+    }
   }
 
   &__logo {
