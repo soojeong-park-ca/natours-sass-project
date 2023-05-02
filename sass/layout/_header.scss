@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 .header {
   position: relative;
@@ -16,6 +17,10 @@
   background-position: top;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include m.respondMax(v.$screen-smallest) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;

@@ -30,7 +30,7 @@ body {
     animation: moveInFromLeft 1s ease-out;
 
     @include m.respondMax(v.$screen-smallest) {
-      letter-spacing: f.rem(10px);
+      letter-spacing: #{f.fluid(10px, 20px, 280px, 600px)};
     }
   }
 

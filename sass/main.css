@@ -114,7 +114,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .heading-primary--main {
-    letter-spacing: 0.625rem;
+    letter-spacing: clamp( 0.625rem, 3.125vw + 0.078125rem, 1.25rem );
   }
 }
 .heading-primary--sub {
@@ -813,6 +813,12 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 }
 .header__logo-box {
   position: absolute;
