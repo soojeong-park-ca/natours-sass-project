@@ -35,8 +35,8 @@
     }
 
     @include m.respondMax(v.$screen-smallest) {
-      height: f.rem(60px);
-      width: f.rem(60px);
+      height: f.rem(55px);
+      width: f.rem(55px);
 
       top: f.rem(20px);
       right: f.rem(20px);
@@ -65,8 +65,8 @@
     }
 
     @include m.respondMax(v.$screen-smallest) {
-      height: f.rem(50px);
-      width: f.rem(50px);
+      height: f.rem(45px);
+      width: f.rem(45px);
 
       top: f.rem(25px);
       right: f.rem(25px);
@@ -120,6 +120,10 @@
 
       padding: f.rem(10px) f.rem(20px);
       transition: all 0.4s;
+
+      @include m.respondMax(v.$screen-smallest) {
+        font-size: #{f.fluid(24px, 30px, 280px, 600px)};
+      }
     }
 
     &:hover,

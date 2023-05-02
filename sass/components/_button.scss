@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 .btn {
   z-index: 0;
@@ -11,6 +12,7 @@
     position: relative;
 
     font-size: v.$font-size-default;
+    font-size: #{f.fluid(14px, 20px, 280px, 1920px)};
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 100px;
@@ -21,6 +23,9 @@
     // STYLE FOR <button> ELEMENT
     border: none;
     cursor: pointer;
+
+    // @include m.respondMax(v.$screen-smallest) {
+    // }
   }
 
   &:hover {
