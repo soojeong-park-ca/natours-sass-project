@@ -1,9 +1,10 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 
 .story-container {
   position: relative;
-  max-width: v.$px10 * 130;
+  max-width: f.rem(1300px);
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -15,22 +16,22 @@
   font-size: v.$font-size-default;
   background-color: rgba(v.$color-white, 0.6);
   border-radius: v.$border-radius-small;
-  box-shadow: 0 v.$px10 * 3 v.$px10 * 6 rgba(v.$color-black, 0.1);
+  box-shadow: 0 f.rem(30px) f.rem(60px) rgba(v.$color-black, 0.1);
 
-  padding: v.$px10 * 6;
-  padding-left: v.$px10 * 9;
+  padding: f.rem(60px);
+  padding-left: f.rem(90px);
   margin: 0 auto;
   transform: skewX(-12deg);
   position: relative;
 
   &__shape {
-    width: v.$px10 * 15;
-    height: v.$px10 * 15;
+    width: f.rem(150px);
+    height: f.rem(150px);
 
     float: left;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-#{v.$px10 * 3}) skewX(12deg);
+    transform: translateX(f.rem(-30px)) skewX(12deg);
     position: relative;
   }
   &__img {
@@ -56,7 +57,7 @@
     left: 50%;
     transform: translate(-50%, 20%);
 
-    font-size: v.$px10 * 1.7;
+    font-size: f.rem(17px);
     color: white;
     text-transform: uppercase;
     text-align: center;

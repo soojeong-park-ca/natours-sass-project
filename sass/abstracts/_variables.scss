@@ -30,3 +30,16 @@ $border-radius-small: 3px;
 $grid-width: 71.25rem; // 1140px
 $gutter-vertical: 5rem; // 80px
 $gutter-horizontal: 3.75rem; // 60px
+
+// MEDIA QUERY BREAKPOINTS
+/*
+0 - 600px:    Phone
+600 - 900px:  Tablet / Portrait
+900 - 1200px: Tablet / Landscape
+1200 - 1800px: Desktop <--- Default Style (Desktop-first)
+1800px +      Big Desktop
+*/
+$screen-smallest: 600px;
+$screen-small: 900px;
+$screen-medium: 1200px;
+$screen-huge: 1800px;

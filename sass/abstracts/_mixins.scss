@@ -1,14 +1,29 @@
-@mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+@use "./variables" as v;
 
 @mixin absoluteCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:    Phone
+600 - 900px:  Tablet / Portrait
+900 - 1200px: Tablet / Landscape
+1200 - 1800px: Desktop <--- Default Style (Desktop-first)
+1800px +      Big Desktop
+*/
+
+@mixin respondMax($breakpoint) {
+  @media (max-width: calc(calc($breakpoint / 16px) * 1em)) {
+    @content;
+  }
+}
+
+@mixin respondMin($breadkpoint) {
+  @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
+    @content;
+  }
 }

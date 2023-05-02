@@ -1,17 +1,18 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .feature-box {
   background-color: rgba(v.$color-white, 0.8);
-  font-size: v.$px10 * 1.5;
-  padding: v.$px10 * 2.5;
+  font-size: f.rem(15px);
+  padding: f.rem(25px);
   text-align: center;
   border-radius: v.$border-radius-small;
-  box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.15);
+  box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
   transition: transform 0.3s;
 
   &__icon {
-    font-size: v.$px10 * 6;
-    margin-block: v.$px10 * 1.5 v.$px10 * 2.5;
+    font-size: f.rem(60px);
+    margin-block: f.rem(15px) f.rem(25px);
     display: inline-block;
     background-image: linear-gradient(
       to right,
@@ -24,6 +25,6 @@
   }
 
   &:hover {
-    transform: translateY(-#{v.$px10 * 1.5}) scale(1.03);
+    transform: translateY(f.rem(-15px)) scale(1.03);
   }
 }

@@ -1,11 +1,12 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .composition {
   position: relative;
 
   &__photo {
     width: 55%;
-    box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.4);
+    box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: 10;
@@ -14,21 +15,21 @@
 
     &--p1 {
       left: 0;
-      top: -#{v.$px10 * 2};
+      top: f.rem(-20px);
     }
     &--p2 {
       right: 0;
-      top: v.$px10 * 2;
+      top: f.rem(20px);
     }
     &--p3 {
       left: 20%;
-      top: v.$px10 * 10;
+      top: f.rem(100px);
     }
 
     &:hover {
       outline: 15px solid v.$color-primary;
       transform: scale(1.05) translateY((-5px));
-      box-shadow: 0 v.$px10 * 2.5 v.$px10 * 4 rgba(v.$color-black, 0.5);
+      box-shadow: 0 f.rem(25px) f.rem(40px) rgba(v.$color-black, 0.5);
       border-radius: 0;
       z-index: 20;
     }

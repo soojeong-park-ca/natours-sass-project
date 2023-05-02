@@ -1,28 +1,28 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .u-center-text {
   text-align: center;
 }
 
 .u-margin-top-medium {
-  margin-top: v.$px10 * 6;
+  margin-top: f.rem(60px);
 }
 .u-margin-top-big {
-  margin-top: v.$px10 * 8;
+  margin-top: f.rem(80px);
 }
 .u-margin-top-huge {
-  margin-top: v.$px10 * 10;
+  margin-top: f.rem(100px);
 }
 
 .u-margin-bottom-small {
-  margin-bottom: v.$px10 * 1.5;
+  margin-bottom: f.rem(15px);
 }
 .u-margin-bottom-medium {
-  margin-bottom: v.$px10 * 4;
+  margin-bottom: f.rem(40px);
 }
 .u-margin-bottom-big {
-  margin-bottom: v.$px10 * 8;
+  margin-bottom: f.rem(80px);
 }
 .u-margin-bottom-huge {
-  margin-bottom: v.$px10 * 10;
+  margin-bottom: f.rem(100px);
 }

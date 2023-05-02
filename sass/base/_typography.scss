@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 body {
   font-family: "Lato", sans-serif;
@@ -7,7 +8,7 @@ body {
   line-height: 1.7;
   color: v.$color-grey-dark-1;
 
-  padding: v.$px10 * 3;
+  padding: f.rem(30px);
 }
 
 .heading-primary {
@@ -15,31 +16,31 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
 
-  margin-bottom: v.$px10 * 6;
+  margin-bottom: f.rem(60px);
 
   &--main {
     display: block;
-    font-size: v.$px10 * 6;
+    font-size: f.rem(60px);
     font-weight: 400;
-    letter-spacing: v.$px10 * 3.5;
-    padding-left: v.$px10 * 3.5;
+    letter-spacing: f.rem(35px);
+    padding-left: f.rem(35px);
 
     animation: moveInFromLeft 1s ease-out;
   }
 
   &--sub {
     display: block;
-    font-size: v.$px10 * 2;
+    font-size: f.rem(20px);
     font-weight: 700;
-    letter-spacing: v.$px10 * 1.7;
-    padding-left: v.$px10 * 1.7;
+    letter-spacing: f.rem(17px);
+    padding-left: f.rem(17px);
 
     animation: moveInFromRight 1s ease-out;
   }
 }
 
 .heading-secondary {
-  font-size: v.$px10 * 3.5;
+  font-size: f.rem(35px);
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -56,7 +57,7 @@ body {
 
   &:hover {
     transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: calc(v.$px10 / 2) v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.2);
+    text-shadow: f.rem(5px) f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
   }
 }
 
@@ -70,6 +71,6 @@ body {
   font-size: v.$font-size-default;
 
   &:not(:last-child) {
-    margin-bottom: v.$px10 * 3;
+    margin-bottom: f.rem(30px);
   }
 }

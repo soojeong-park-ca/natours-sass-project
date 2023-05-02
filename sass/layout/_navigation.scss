@@ -1,17 +1,18 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 
 .navigation {
   &__checkbox {
     appearance: none;
     position: fixed;
-    top: v.$px10 * 3;
-    right: v.$px10 * 3;
+    top: f.rem(30px);
+    right: f.rem(30px);
   }
 
   &__button {
-    height: v.$px10 * 7;
-    width: v.$px10 * 7;
+    height: f.rem(70px);
+    width: f.rem(70px);
     border-radius: 50%;
 
     display: flex;
@@ -19,10 +20,10 @@
     justify-content: center;
 
     position: fixed;
-    top: v.$px10 * 6;
-    right: v.$px10 * 6;
+    top: f.rem(60px);
+    right: f.rem(60px);
     background-color: v.$color-white;
-    box-shadow: 0 v.$px10 v.$px10 * 3 rgba(v.$color-black, 0.1);
+    box-shadow: 0 f.rem(10px) f.rem(30px) rgba(v.$color-black, 0.1);
 
     transition: all 0.2s;
     cursor: pointer;
@@ -30,13 +31,13 @@
   }
 
   &__background {
-    height: v.$px10 * 6;
-    width: v.$px10 * 6;
+    height: f.rem(60px);
+    width: f.rem(60px);
     border-radius: 50%;
 
     position: fixed;
-    top: v.$px10 * 6.5;
-    right: v.$px10 * 6.5;
+    top: f.rem(65px);
+    right: f.rem(65px);
     background-image: radial-gradient(
       v.$color-primary-light,
       v.$color-primary-dark
@@ -67,7 +68,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: v.$px10;
+    gap: f.rem(10px);
 
     @include m.absoluteCenter;
     list-style: none;
@@ -79,7 +80,7 @@
       display: inline-block;
 
       text-decoration: none;
-      font-size: v.$px10 * 3;
+      font-size: f.rem(30px);
       font-weight: 300;
       color: v.$color-white;
       text-transform: uppercase;
@@ -91,7 +92,7 @@
       );
       background-size: 225%;
 
-      padding: v.$px10 v.$px10 * 2;
+      padding: f.rem(10px) f.rem(20px);
       transition: all 0.4s;
     }
 
@@ -99,7 +100,7 @@
     &:active {
       background-position: 100%;
       color: v.$color-primary;
-      transform: translateX(v.$px10);
+      transform: translateX(f.rem(10px));
     }
   }
 
@@ -120,7 +121,7 @@
     &,
     &::before,
     &::after {
-      width: v.$px10 * 3;
+      width: f.rem(30px);
       height: 3px;
 
       background-color: v.$color-grey-dark-1;
@@ -137,18 +138,18 @@
     }
 
     &::before {
-      top: -#{v.$px10 * 0.8};
+      top: f.rem(-8px);
     }
     &::after {
-      top: v.$px10 * 0.8;
+      top: f.rem(8px);
     }
   }
 
   &__button:hover &__icon::before {
-    top: -#{v.$px10};
+    top: f.rem(-10px);
   }
   &__button:hover &__icon::after {
-    top: v.$px10;
+    top: f.rem(10px);
   }
 
   &__checkbox:checked + &__button &__icon {

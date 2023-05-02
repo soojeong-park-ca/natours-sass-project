@@ -18,13 +18,16 @@ This is a landing page website for a fictional tour company called "Natours"
 
 ### Features
 
-Some features from the website/app :
+Some features from the website :
 
-- Structuring SASS files using `7-1 Pattern`;
-- Using **`reusable CSS Grid`** with different number of columns to organize contents;
+- Structuring SASS files using **7-1 Pattern**;
+- Using **reusable CSS Grid** with different number of columns to organize contents;
 - Using **`<figure>`** HTML tag and **`shape-outside`**, **`clip-path`** CSS properties to have text content float around an image;
 - **Rotating cards** for different tour products using **`transform: rotate()`** and `backface-visibility: hidden`;
 - video element as a background image for a section;
+- **Custom Radio Inputs** used in booking form;
+- **Custom Checkbox Input** used to make navigation menu;
+- Some JS functions for testimonial slider, navigation, and opening / closing modal popups using Vanilla Js
 
 ### Screenshots
 
@@ -46,6 +49,7 @@ Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and S
 
 - HTML
 - SASS (SCSS)
+- Responsive | Desktop first
 - Vanilla JavaScript
 
 ### Reflection
@@ -58,8 +62,8 @@ Some new things I learned while building this website/app are:
 
 - Using the modern **`:focus-visible`** pseudo-element to style focus outlines while keeping accessibility in mind
 - HTML elements: **`<figure>`** & using it with `float` | `<video>` & `<source>` |
-- CSS properties: **`clip-path`** | **`background-clip`** | **`transform: skew()`** | **`shape-outside`** | **`something-else`**
-- CSS functions: **`circle(<shape-radius> at <position>)`** |
+- CSS properties: **`clip-path`** | **`background-clip`** | **`shape-outside`** | **`column-count`**
+- CSS functions: **`circle(<shape-radius> at <position>)`** | **`transform: skew()`**
 
 I look forward to ...
 

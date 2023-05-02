@@ -1,22 +1,23 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 
 .card {
   // FUNCTIONALITY
-  perspective: v.$px10 * 150;
+  perspective: f.rem(1500px);
   position: relative;
-  height: v.$px10 * 52;
+  height: f.rem(520px);
 
   &__side {
     width: 100%;
-    height: v.$px10 * 52;
+    height: f.rem(520px);
     position: absolute;
     top: 0;
     left: 0;
 
     border-radius: v.$border-radius-small;
     overflow: hidden;
-    box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.15);
+    box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
     backface-visibility: hidden;
     transition: all 0.8s ease;
 
@@ -60,7 +61,7 @@
 
   // FRONT SIDE STYLING
   &__picture {
-    height: v.$px10 * 23;
+    height: f.rem(230px);
     background-size: cover;
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -93,11 +94,11 @@
 
   &__heading {
     position: absolute;
-    top: v.$px10 * 12;
-    right: v.$px10 * 2;
+    top: f.rem(120px);
+    right: f.rem(20px);
     width: 70%;
 
-    font-size: v.$px10 * 2.8;
+    font-size: f.rem(28px);
     font-weight: 300;
     text-transform: uppercase;
     color: v.$color-white;
@@ -105,7 +106,7 @@
   }
 
   &__heading-span {
-    padding: v.$px10 v.$px10 * 1.5;
+    padding: f.rem(10px) f.rem(15px);
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
@@ -133,7 +134,7 @@
   }
 
   &__details {
-    padding: v.$px10 * 3;
+    padding: f.rem(30px);
 
     ul {
       width: 80%;
@@ -142,8 +143,8 @@
 
       li {
         text-align: center;
-        font-size: v.$px10 * 1.5;
-        padding: v.$px10;
+        font-size: f.rem(15px);
+        padding: f.rem(10px);
 
         &:not(:last-child) {
           border-bottom: 1px solid v.$color-grey-light-2;
@@ -162,14 +163,14 @@
   &__price-box {
     color: v.$color-white;
     text-align: center;
-    margin-bottom: v.$px10 * 8;
+    margin-bottom: f.rem(80px);
   }
   &__price-only {
-    font-size: v.$px10 * 1.4;
+    font-size: f.rem(14px);
     text-transform: uppercase;
   }
   &__price-value {
-    font-size: v.$px10 * 6;
+    font-size: f.rem(60px);
     font-weight: 100;
   }
 }

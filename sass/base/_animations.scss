@@ -1,13 +1,13 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 @keyframes moveInFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(v.$px10 * -10);
+    transform: translateX(f.rem(-100px));
   }
 
   80% {
-    transform: translateX(v.$px10);
+    transform: translateX(f.rem(10px));
   }
 
   100% {
@@ -19,11 +19,11 @@
 @keyframes moveInFromRight {
   0% {
     opacity: 0;
-    transform: translateX(v.$px10 * 10);
+    transform: translateX(f.rem(100px));
   }
 
   80% {
-    transform: translateX(-#{v.$px10});
+    transform: translateX(f.rem(-10px));
   }
 
   100% {
@@ -35,7 +35,7 @@
 @keyframes moveInFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(v.$px10 * 3);
+    transform: translateY(f.rem(30px));
   }
 
   100% {

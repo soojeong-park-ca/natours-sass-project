@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 *,
 *::before,
@@ -23,6 +24,10 @@
 body {
   height: 100%;
   box-sizing: border-box;
+
+  @include m.respondMax(v.$screen-smallest) {
+    width: 50%;
+  }
 }
 
 .hidden {

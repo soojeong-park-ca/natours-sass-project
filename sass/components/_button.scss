@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .btn {
   z-index: 0;
@@ -15,7 +16,7 @@
     border-radius: 100px;
     transition: all 0.3s;
 
-    padding: v.$px10 * 1.4 v.$px10 * 4;
+    padding: f.rem(14px) f.rem(40px);
 
     // STYLE FOR <button> ELEMENT
     border: none;
@@ -24,7 +25,7 @@
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.2);
+    box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
@@ -34,7 +35,7 @@
 
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 calc(v.$px10 / 2) v.$px10 rgba(v.$color-black, 0.2);
+    box-shadow: 0 f.rem(5px) f.rem(10px) rgba(v.$color-black, 0.2);
   }
 
   &--white {
@@ -91,12 +92,12 @@
   &:hover {
     background-color: v.$color-primary;
     color: v.$color-white;
-    box-shadow: 0 v.$px10 v.$px10 * 2 rgba(v.$color-black, 0.15);
+    box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.15);
     transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 calc(v.$px10 / 2) v.$px10 rgba(v.$color-black, 0.15);
+    box-shadow: 0 f.rem(5px) f.rem(10px) rgba(v.$color-black, 0.15);
     transform: translateY(0);
   }
 }

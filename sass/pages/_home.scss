@@ -1,8 +1,9 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
 
 .section-about {
   background-color: v.$color-grey-light-1;
-  padding: v.$px10 * 25 0;
+  padding: f.rem(250px) 0;
   margin-top: -20vh;
 }
 
@@ -10,8 +11,8 @@
   position: relative;
   transform: skewY(-7deg);
 
-  padding: v.$px10 * 20 0;
-  margin-top: -#{v.$px10 * 9};
+  padding: f.rem(200px) 0;
+  margin-top: f.rem(-90px);
 
   & > * {
     transform: skewY(7deg);
@@ -39,17 +40,17 @@
 
 .section-tours {
   background-color: v.$color-grey-light-1;
-  padding: v.$px10 * 25 0 v.$px10 * 7 0;
-  margin-top: -#{v.$px10 * 9};
+  padding: f.rem(250px) 0 f.rem(70px) 0;
+  margin-top: f.rem(-90px);
 }
 
 .section-stories {
   position: relative;
-  padding: v.$px10 * 15 0;
+  padding: f.rem(150px) 0;
 }
 
 .section-book {
-  padding: v.$px10 * 15 0;
+  padding: f.rem(150px) 0;
   background-image: linear-gradient(
     to right bottom,
     v.$color-primary-light,
@@ -57,7 +58,7 @@
   );
 }
 .book-container {
-  max-width: v.$px10 * 114;
+  max-width: f.rem(1140px);
   margin: 0 auto;
 }
 .book {
@@ -70,12 +71,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: v.$border-radius-small;
-  box-shadow: 0 v.$px10 * 1.5 v.$px10 * 4 rgba(v.$color-black, 0.2);
+  box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.2);
 
   // height: v.$px10 * 50;
 
   &__form {
     width: 50%;
-    padding: v.$px10 * 6;
+    padding: f.rem(60px);
   }
 }

@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
 
 .popup {
   height: 100vh;
@@ -23,7 +24,7 @@
 
     border-radius: 3px;
     background-color: v.$color-white;
-    box-shadow: 0 v.$px10 * 2 v.$px10 * 4 rgba(v.$color-black, 0.2);
+    box-shadow: 0 f.rem(20px) f.rem(40px) rgba(v.$color-black, 0.2);
     overflow: hidden;
 
     position: relative;
@@ -40,7 +41,7 @@
 
   &__right {
     width: 67%;
-    padding: v.$px10 * 3 v.$px10 * 5;
+    padding: f.rem(30px) f.rem(50px);
   }
 
   &__img {
@@ -49,11 +50,11 @@
   }
 
   &__text {
-    font-size: v.$px10 * 1.4;
-    margin-bottom: v.$px10 * 4;
+    font-size: f.rem(14px);
+    margin-bottom: f.rem(40px);
 
     column-count: 2;
-    column-gap: v.$px10 * 4;
+    column-gap: f.rem(40px);
     column-rule: 1px solid v.$color-grey-light-2;
 
     -webkit-hyphens: auto;
@@ -66,12 +67,12 @@
     text-decoration: none;
     border: none;
     background-color: transparent;
-    font-size: v.$px10 * 2;
+    font-size: f.rem(20px);
     line-height: 1;
     color: v.$color-grey-dark-3;
     position: absolute;
-    top: v.$px10 * 3;
-    right: v.$px10 * 3;
+    top: f.rem(30px);
+    right: f.rem(30px);
     transition: all 0.2s;
 
     cursor: pointer;
