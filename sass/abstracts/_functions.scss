@@ -1,12 +1,32 @@
 @use "sass:math";
 
-/// Converts PX to REM
-/// @access public
-/// @param {string} $size - Value to be converted in PX.
-/// @returns {string} - Returns REM string.
-/// @example font-size: rem(24px);
-/// @returns font-size: 1.5rem;
+// Converts PX to REM
 @function rem($size) {
   $remSize: math.div($size, 16px);
   @return #{$remSize}rem;
 }
+
+// fluid typography using clamp()
+@function fluid(
+  $min-size,
+  $max-size,
+  $min-breakpoint,
+  $max-breakpoint,
+  $unit: vw
+) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept-rem: rem($min-size - $slope * $min-breakpoint);
+  $min-size-rem: rem($min-size);
+  $max-size-rem: rem($max-size);
+
+  @return clamp(
+    #{$min-size-rem},
+    #{$slope-to-unit}#{$unit} + #{$intercept-rem},
+    #{$max-size-rem}
+  );
+}
+
+// examples:
+// font-size: #{fluid(16px, 32px, 320px, 960px)}
+// font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
