@@ -41,12 +41,16 @@
     transform: translateY(0);
   }
 }
+* {
+  outline: 1px solid red;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 *:focus {
@@ -61,9 +65,22 @@
   border-radius: 2px;
 }
 
-body {
+html {
+  width: 100%;
   height: 100%;
-  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  padding: 1.875rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 .hidden {
@@ -74,10 +91,9 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  font-size: clamp( 1rem, 2.6666666667vw + -1rem, 2rem );
+  font-size: clamp( 0.75rem, 0.487804878vw + 0.6646341463rem, 1.25rem );
   line-height: 1.7;
   color: #777;
-  padding: 1.875rem;
 }
 
 .heading-primary {
@@ -89,10 +105,17 @@ body {
 .heading-primary--main {
   display: block;
   font-size: 3.75rem;
+  font-size: clamp( 1.5625rem, 2.1341463415vw + 1.1890243902rem, 3.75rem );
   font-weight: 400;
   letter-spacing: 2.1875rem;
   padding-left: 2.1875rem;
+  padding-left: clamp( 0.625rem, 1.5243902439vw + 0.3582317073rem, 2.1875rem );
   animation: moveInFromLeft 1s ease-out;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 0.625rem;
+  }
 }
 .heading-primary--sub {
   display: block;
@@ -102,9 +125,15 @@ body {
   padding-left: 1.0625rem;
   animation: moveInFromRight 1s ease-out;
 }
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.3125rem;
+  }
+}
 
 .heading-secondary {
   font-size: 2.1875rem;
+  font-size: clamp( 1.25rem, 0.9146341463vw + 1.0899390244rem, 2.1875rem );
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -128,6 +157,7 @@ body {
 
 .paragraph {
   font-size: 1rem;
+  font-size: clamp( 0.75rem, 0.487804878vw + 0.6646341463rem, 1.25rem );
 }
 .paragraph:not(:last-child) {
   margin-bottom: 1.875rem;
@@ -770,6 +800,7 @@ body {
 
 .header {
   position: relative;
+  width: 100%;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;

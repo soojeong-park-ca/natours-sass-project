@@ -1,15 +1,14 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: v.$font-size-default;
-  font-size: #{f.fluid(16px, 32px, 1200px, 1800px)};
+  font-size: #{f.fluid(12px, 20px, 280px, 1920px)};
   line-height: 1.7;
   color: v.$color-grey-dark-1;
-
-  padding: f.rem(30px);
 }
 
 .heading-primary {
@@ -22,11 +21,17 @@ body {
   &--main {
     display: block;
     font-size: f.rem(60px);
+    font-size: #{f.fluid(25px, 60px, 280px, 1920px)};
     font-weight: 400;
     letter-spacing: f.rem(35px);
     padding-left: f.rem(35px);
+    padding-left: #{f.fluid(10px, 35px, 280px, 1920px)};
 
     animation: moveInFromLeft 1s ease-out;
+
+    @include m.respondMax(v.$screen-smallest) {
+      letter-spacing: f.rem(10px);
+    }
   }
 
   &--sub {
@@ -37,11 +42,16 @@ body {
     padding-left: f.rem(17px);
 
     animation: moveInFromRight 1s ease-out;
+
+    @include m.respondMax(v.$screen-smallest) {
+      letter-spacing: f.rem(5px);
+    }
   }
 }
 
 .heading-secondary {
   font-size: f.rem(35px);
+  font-size: #{f.fluid(20px, 35px, 280px, 1920px)};
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -70,6 +80,7 @@ body {
 
 .paragraph {
   font-size: v.$font-size-default;
+  font-size: #{f.fluid(12px, 20px, 280px, 1920px)};
 
   &:not(:last-child) {
     margin-bottom: f.rem(30px);

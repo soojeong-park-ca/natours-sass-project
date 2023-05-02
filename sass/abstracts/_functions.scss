@@ -6,7 +6,7 @@
   @return #{$remSize}rem;
 }
 
-// fluid typography using clamp()
+// fluid typography using clamp(), args in pixels
 @function fluid(
   $min-size,
   $max-size,
