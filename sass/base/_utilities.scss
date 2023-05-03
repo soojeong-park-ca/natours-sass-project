@@ -1,4 +1,6 @@
 @use "../abstracts/functions" as f;
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 .u-center-text {
   text-align: center;
@@ -19,9 +21,17 @@
 }
 .u-margin-bottom-medium {
   margin-bottom: f.rem(40px);
+
+  @include m.respondMax(v.$screen-small) {
+    margin-bottom: f.rem(30px);
+  }
 }
 .u-margin-bottom-big {
   margin-bottom: f.rem(80px);
+
+  @include m.respondMax(v.$screen-small) {
+    margin-bottom: f.rem(50px);
+  }
 }
 .u-margin-bottom-huge {
   margin-bottom: f.rem(100px);

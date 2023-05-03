@@ -1,18 +1,37 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 .section-about {
   background-color: v.$color-grey-light-1;
-  padding: f.rem(250px) 0;
+  padding-block: f.rem(250px);
   margin-top: -20vh;
+
+  @include m.respondMax(v.$screen-small) {
+    padding-block: f.rem(200px);
+  }
+  @include m.respondMax(v.$screen-smallest) {
+    padding-block: f.rem(180px);
+  }
+
+  & .grid .col {
+    height: 100%;
+  }
 }
 
 .section-features {
   position: relative;
   transform: skewY(-7deg);
 
-  padding: f.rem(200px) 0;
+  padding-block: f.rem(200px);
   margin-top: f.rem(-90px);
+
+  @include m.respondMax(v.$screen-small) {
+    padding-block: f.rem(150px);
+  }
+  @include m.respondMax(v.$screen-smallest) {
+    padding-block: f.rem(130px);
+  }
 
   & > * {
     transform: skewY(7deg);
@@ -40,22 +59,43 @@
 
 .section-tours {
   background-color: v.$color-grey-light-1;
-  padding: f.rem(250px) 0 f.rem(70px) 0;
+  padding-block: f.rem(250px) f.rem(70px);
   margin-top: f.rem(-90px);
+
+  @include m.respondMax(v.$screen-small) {
+    padding-block: f.rem(200px) f.rem(50px);
+  }
+  @include m.respondMax(v.$screen-smallest) {
+    padding-block: f.rem(180px) f.rem(30px);
+  }
 }
 
 .section-stories {
   position: relative;
-  padding: f.rem(150px) 0;
+  padding-block: f.rem(150px);
+
+  @include m.respondMax(v.$screen-small) {
+    padding-block: f.rem(100px);
+  }
+  @include m.respondMax(v.$screen-smallest) {
+    padding-block: f.rem(80px);
+  }
 }
 
 .section-book {
-  padding: f.rem(150px) 0;
+  padding-block: f.rem(150px);
   background-image: linear-gradient(
     to right bottom,
     v.$color-primary-light,
     v.$color-primary-dark
   );
+
+  @include m.respondMax(v.$screen-small) {
+    padding-block: f.rem(100px);
+  }
+  @include m.respondMax(v.$screen-smallest) {
+    padding-block: f.rem(80px);
+  }
 }
 .book-container {
   max-width: f.rem(1140px);
@@ -79,4 +119,9 @@
     width: 50%;
     padding: f.rem(60px);
   }
+}
+
+.section {
+  padding-inline: f.rem(80px);
+  padding-inline: #{f.fluid(25px, 100px, 280px, 1200px)};
 }

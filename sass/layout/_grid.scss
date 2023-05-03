@@ -13,16 +13,18 @@
 }
 
 .grid {
-  // max-width: v.$grid-width;
-  width: #{f.fluid(260px, 1500px, 280px, 1920px)};
+  max-width: v.$grid-width;
+  // width: #{f.fluid(260px, 1500px, 280px, 1920px)};
   display: grid;
   column-gap: v.$gutter-horizontal;
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
 
-  @include m.respondMax(v.$screen-medium) {
+  @include m.respondMax(v.$screen-small) {
     grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
     row-gap: v.$gutter-vertical;
   }
 }
