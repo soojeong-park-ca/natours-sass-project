@@ -126,11 +126,13 @@
       }
     }
 
-    &:hover,
-    &:active {
-      background-position: 100%;
-      color: v.$color-primary;
-      transform: translateX(f.rem(10px));
+    @media (hover: hover) {
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: v.$color-primary;
+        transform: translateX(f.rem(10px));
+      }
     }
   }
 
@@ -175,11 +177,13 @@
     }
   }
 
-  &__button:hover &__icon::before {
-    top: f.rem(-10px);
-  }
-  &__button:hover &__icon::after {
-    top: f.rem(10px);
+  @media (hover: hover) {
+    &__button:hover &__icon::before {
+      top: f.rem(-10px);
+    }
+    &__button:hover &__icon::after {
+      top: f.rem(10px);
+    }
   }
 
   &__checkbox:checked + &__button &__icon {

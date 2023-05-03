@@ -1,7 +1,9 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 .feature-box {
+  height: 100%;
   background-color: rgba(v.$color-white, 0.8);
   font-size: f.rem(15px);
   padding: f.rem(25px);
@@ -9,6 +11,10 @@
   border-radius: v.$border-radius-small;
   box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
   transition: transform 0.3s;
+
+  @include m.respondMax(v.$screen-small) {
+    padding: f.rem(20px);
+  }
 
   &__icon {
     font-size: f.rem(60px);
@@ -22,9 +28,15 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+
+    @include m.respondMax(v.$screen-small) {
+      margin-block: f.rem(15px) f.rem(20px);
+    }
   }
 
-  &:hover {
-    transform: translateY(f.rem(-15px)) scale(1.03);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(f.rem(-15px)) scale(1.03);
+    }
   }
 }

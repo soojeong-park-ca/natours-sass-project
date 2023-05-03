@@ -28,13 +28,15 @@
     // }
   }
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
 
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
     }
   }
 
@@ -94,11 +96,13 @@
     transition: all 0.2s;
   }
 
-  &:hover {
-    background-color: v.$color-primary;
-    color: v.$color-white;
-    box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.15);
-    transform: translateY(-2px);
+  @media (hover: hover) {
+    &:hover {
+      background-color: v.$color-primary;
+      color: v.$color-white;
+      box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.15);
+      transform: translateY(-2px);
+    }
   }
 
   &:active {

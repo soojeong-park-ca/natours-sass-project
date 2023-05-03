@@ -76,7 +76,12 @@
       transition: all 0.2s;
     }
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        color: v.$color-primary;
+      }
+    }
+
     &:active {
       color: v.$color-primary;
     }

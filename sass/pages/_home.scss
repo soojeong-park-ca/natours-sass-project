@@ -4,14 +4,15 @@
 
 .section-about {
   background-color: v.$color-grey-light-1;
-  padding-block: f.rem(250px);
+  padding-block: f.rem(300px);
   margin-top: -20vh;
 
   @include m.respondMax(v.$screen-small) {
-    padding-block: f.rem(200px);
+    padding-block: f.rem(285px);
   }
+
   @include m.respondMax(v.$screen-smallest) {
-    padding-block: f.rem(180px);
+    padding-block: f.rem(200px);
   }
 
   & .grid .col {
@@ -31,6 +32,23 @@
   }
   @include m.respondMax(v.$screen-smallest) {
     padding-block: f.rem(130px);
+  }
+
+  & .grid {
+    grid-auto-rows: 1fr;
+    row-gap: v.$gutter-vertical;
+
+    @include m.respondMax(v.$screen-medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include m.respondMax(v.$screen-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  & .col {
+    height: 100%;
   }
 
   & > * {

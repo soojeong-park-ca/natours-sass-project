@@ -56,16 +56,20 @@
       }
     }
 
-    &:hover {
-      outline: 15px solid v.$color-primary;
-      transform: scale(1.05) translateY((-5px));
-      box-shadow: 0 f.rem(25px) f.rem(40px) rgba(v.$color-black, 0.5);
-      border-radius: 0;
-      z-index: 20;
+    @media (hover: hover) {
+      &:hover {
+        outline: 15px solid v.$color-primary;
+        transform: scale(1.05) translateY((-5px));
+        box-shadow: 0 f.rem(25px) f.rem(40px) rgba(v.$color-black, 0.5);
+        border-radius: 0;
+        z-index: 20;
+      }
     }
   }
 
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.95);
+  @media (hover: hover) {
+    &:hover &__photo:not(:hover) {
+      transform: scale(0.95);
+    }
   }
 }

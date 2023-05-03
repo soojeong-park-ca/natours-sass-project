@@ -67,9 +67,11 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
 
-  &:hover {
-    transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: f.rem(5px) f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
+  @media (hover: hover) {
+    &:hover {
+      transform: skew(15deg, 2deg) scale(1.1);
+      text-shadow: f.rem(5px) f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
+    }
   }
 }
 

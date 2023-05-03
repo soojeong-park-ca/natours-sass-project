@@ -66,13 +66,15 @@
     backface-visibility: hidden;
   }
 
-  &:hover &__caption {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  &:hover &__img {
-    filter: blur(3px) brightness(0.9);
-    transform: translate(-50%, -50%) scale(1);
+  @media (hover: hover) {
+    &:hover &__caption {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+      filter: blur(3px) brightness(0.9);
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
 
