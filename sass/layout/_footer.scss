@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
 
 .footer {
   width: 100%;
@@ -9,14 +10,25 @@
   justify-content: center;
   gap: f.rem(80px);
 
+  font-size: f.rem(15px);
   background-color: v.$color-grey-dark-3;
   padding: f.rem(14px);
+
+  @include m.respondMax(v.$screen-smallest) {
+    gap: f.rem(60px);
+    font-size: f.rem(12px);
+  }
 
   &__logo-box {
     width: f.rem(150px);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include m.respondMax(v.$screen-smallest) {
+      width: f.rem(100px);
+      margin-top: f.rem(60px);
+    }
   }
 
   &__logo {
@@ -24,19 +36,27 @@
   }
 
   &__content {
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: #{f.fluid(100px, 250px, 600px, 1920px)};
+    align-items: start;
+    justify-content: center;
+
+    @include m.respondMax(v.$screen-smallest) {
+      margin-bottom: f.rem(60px);
+      grid-template-columns: 1fr;
+      row-gap: f.rem(60px);
+    }
   }
 
   &__navigation {
-    width: 40%;
     border-top: 1px solid v.$color-grey-dark-1;
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: f.rem(15px);
@@ -51,7 +71,6 @@
       display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: f.rem(15px);
       color: v.$color-grey-light-1;
 
       transition: all 0.2s;
@@ -64,8 +83,12 @@
   }
 
   &__copyright {
-    width: 40%;
+    text-align: right;
     border-top: 1px solid v.$color-grey-dark-1;
+
+    @include m.respondMax(v.$screen-smallest) {
+      text-align: center;
+    }
   }
 
   &__author {
