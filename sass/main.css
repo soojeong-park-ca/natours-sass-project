@@ -766,7 +766,7 @@ body {
   .footer__content {
     margin-bottom: 3.75rem;
     grid-template-columns: 1fr;
-    row-gap: 3.75rem;
+    row-gap: 2.5rem;
   }
 }
 .footer__navigation {

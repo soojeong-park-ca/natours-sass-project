@@ -46,7 +46,7 @@
     @include m.respondMax(v.$screen-smallest) {
       margin-bottom: f.rem(60px);
       grid-template-columns: 1fr;
-      row-gap: f.rem(60px);
+      row-gap: f.rem(40px);
     }
   }
 
