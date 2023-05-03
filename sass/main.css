@@ -41,10 +41,6 @@
     transform: translateY(0);
   }
 }
-* {
-  outline: 1px solid red;
-}
-
 *,
 *::before,
 *::after {
@@ -120,6 +116,7 @@ body {
 .heading-primary--sub {
   display: block;
   font-size: 1.25rem;
+  font-size: clamp( 0.9375rem, 0.9146341463vw + 0.7774390244rem, 1.875rem );
   font-weight: 700;
   letter-spacing: 1.0625rem;
   padding-left: 1.0625rem;
@@ -133,7 +130,7 @@ body {
 
 .heading-secondary {
   font-size: 2.1875rem;
-  font-size: clamp( 1.25rem, 0.9146341463vw + 1.0899390244rem, 2.1875rem );
+  font-size: clamp( 1rem, 1.1585365854vw + 0.7972560976rem, 2.1875rem );
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -151,6 +148,7 @@ body {
 
 .heading-tertiary {
   font-size: 1rem;
+  font-size: clamp( 0.75rem, 0.487804878vw + 0.6646341463rem, 1.25rem );
   font-weight: 700;
   text-transform: uppercase;
 }
