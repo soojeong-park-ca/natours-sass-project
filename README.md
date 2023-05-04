@@ -21,6 +21,7 @@ This is a landing page website for a fictional tour company called "Natours"
 Some features from the website :
 
 - Structuring SASS files using **7-1 Pattern**;
+- Using **responsive images** in HTML and CSS for better performance;
 - Using **reusable CSS Grid** with different number of columns to organize contents;
 - Using **`<figure>`** HTML tag and **`shape-outside`**, **`clip-path`** CSS properties to have text content float around an image;
 - **Rotating cards** for different tour products using **`transform: rotate()`** and `backface-visibility: hidden`;
