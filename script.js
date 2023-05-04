@@ -70,3 +70,22 @@ popup.addEventListener("click", function (e) {
 window.addEventListener("keydown", function (e) {
   e.key === "Escape" && closePopup();
 });
+
+// Stories
+let initialScreenWidth = window.innerWidth;
+const storyParagraph = document.querySelectorAll(".story__paragraph");
+const storyHidden = document.querySelectorAll(".story__hidden");
+
+if (initialScreenWidth <= 900) {
+  storyHidden.forEach(story => story.classList.add("hidden"));
+} else {
+  storyHidden.forEach(story => story.classList.remove("hidden"));
+}
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 900) {
+    storyHidden.forEach(story => story.classList.add("hidden"));
+  } else {
+    storyHidden.forEach(story => story.classList.remove("hidden"));
+  }
+});

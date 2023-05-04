@@ -10,7 +10,7 @@
 }
 
 .story {
-  width: 75%;
+  width: 85%;
   height: 100%;
 
   font-size: v.$font-size-default;
@@ -21,8 +21,33 @@
   padding: f.rem(60px);
   padding-left: f.rem(90px);
   margin: 0 auto;
+
   transform: skewX(-12deg);
   position: relative;
+
+  @include m.respondMax(v.$screen-medium) {
+    width: 100%;
+    padding: f.rem(50px);
+    padding-left: f.rem(75px);
+  }
+
+  @include m.respondMax(v.$screen-small) {
+    tranform: skewX(12deg);
+    // padding: f.rem(40px);
+    // padding-left: f.rem(60px);
+    padding: f.rem(40px);
+    transform: skewX(0);
+  }
+
+  &__flexbox {
+    @include m.respondMax(v.$screen-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 
   &__shape {
     width: f.rem(150px);
@@ -33,6 +58,11 @@
     clip-path: circle(50% at 50% 50%);
     transform: translateX(f.rem(-30px)) skewX(12deg);
     position: relative;
+
+    @include m.respondMax(v.$screen-small) {
+      float: none;
+      transform: skewX(0);
+    }
   }
   &__img {
     height: 100%;
@@ -43,10 +73,20 @@
     transform: translate(-50%, -50%) scale(1.4);
 
     transition: all 0.5s;
+
+    @include m.respondMax(v.$screen-small) {
+      filter: blur(3px) brightness(0.9);
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 
   &__text {
     transform: skewX(12deg);
+
+    @include m.respondMax(v.$screen-small) {
+      transform: skewX(0);
+      margin-top: f.rem(30px);
+    }
   }
 
   &__caption {
@@ -64,6 +104,11 @@
 
     transition: all 0.5s;
     backface-visibility: hidden;
+
+    @include m.respondMax(v.$screen-small) {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -82,7 +127,7 @@
   text-decoration: none;
   border: none;
   background-color: transparent;
-  font-size: 2rem;
+  font-size: f.rem(32px);
   color: rgba(v.$color-primary, 0.8);
 
   cursor: pointer;
@@ -90,13 +135,13 @@
 
 .btn--prev {
   position: absolute;
+  left: -16px;
   top: 50%;
-  left: 7%;
-  transform: translate(-7%, -50%);
+  transform: translateY(-50%);
 }
 .btn--next {
   position: absolute;
+  right: -16px;
   top: 50%;
-  right: 7%;
-  transform: translate(-7%, -50%);
+  transform: translateY(-50%);
 }

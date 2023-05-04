@@ -150,7 +150,7 @@ body {
 
 .heading-tertiary {
   font-size: 1rem;
-  font-size: clamp( 0.75rem, 0.487804878vw + 0.6646341463rem, 1.25rem );
+  font-size: clamp( 0.875rem, 0.6097560976vw + 0.7682926829rem, 1.5rem );
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -773,7 +773,7 @@ body {
 }
 
 .story {
-  width: 75%;
+  width: 85%;
   height: 100%;
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.6);
@@ -785,6 +785,29 @@ body {
   transform: skewX(-12deg);
   position: relative;
 }
+@media (max-width: 75em) {
+  .story {
+    width: 100%;
+    padding: 3.125rem;
+    padding-left: 4.6875rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .story {
+    tranform: skewX(12deg);
+    padding: 2.5rem;
+    transform: skewX(0);
+  }
+}
+@media (max-width: 56.25em) {
+  .story__flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .story__shape {
   width: 9.375rem;
   height: 9.375rem;
@@ -795,6 +818,12 @@ body {
   transform: translateX(-1.875rem) skewX(12deg);
   position: relative;
 }
+@media (max-width: 56.25em) {
+  .story__shape {
+    float: none;
+    transform: skewX(0);
+  }
+}
 .story__img {
   height: 100%;
   position: absolute;
@@ -803,8 +832,20 @@ body {
   transform: translate(-50%, -50%) scale(1.4);
   transition: all 0.5s;
 }
+@media (max-width: 56.25em) {
+  .story__img {
+    filter: blur(3px) brightness(0.9);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 .story__text {
   transform: skewX(12deg);
+}
+@media (max-width: 56.25em) {
+  .story__text {
+    transform: skewX(0);
+    margin-top: 1.875rem;
+  }
 }
 .story__caption {
   opacity: 0;
@@ -818,6 +859,12 @@ body {
   text-align: center;
   transition: all 0.5s;
   backface-visibility: hidden;
+}
+@media (max-width: 56.25em) {
+  .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 @media (hover: hover) and (pointer: fine) {
   .story:hover .story__caption {
@@ -841,16 +888,16 @@ body {
 
 .btn--prev {
   position: absolute;
+  left: -16px;
   top: 50%;
-  left: 7%;
-  transform: translate(-7%, -50%);
+  transform: translateY(-50%);
 }
 
 .btn--next {
   position: absolute;
+  right: -16px;
   top: 50%;
-  right: 7%;
-  transform: translate(-7%, -50%);
+  transform: translateY(-50%);
 }
 
 .footer {
