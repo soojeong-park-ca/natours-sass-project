@@ -146,11 +146,38 @@
   border-radius: v.$border-radius-small;
   box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.2);
 
-  // height: v.$px10 * 50;
+  @include m.respondMax(v.$screen-medium) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(v.$color-white, 0.9) 0% 64.9%,
+        transparent 65% 100%
+      ),
+      url(../../img/nat-10.jpg);
+  }
+
+  @include m.respondMax(v.$screen-small) {
+    background-image: linear-gradient(
+        to right,
+        rgba(v.$color-white, 0.9) 0% 100%
+      ),
+      url(../../img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: f.rem(60px);
+
+    @include m.respondMax(v.$screen-medium) {
+      width: 65%;
+    }
+
+    @include m.respondMax(v.$screen-small) {
+      width: 100%;
+    }
+
+    @include m.respondMax(v.$screen-smallest) {
+      padding: f.rem(40px);
+    }
   }
 }
 

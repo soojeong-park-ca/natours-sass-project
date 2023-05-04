@@ -77,7 +77,7 @@ body {
 
 .heading-tertiary {
   font-size: v.$font-size-default;
-  font-size: #{f.fluid(14px, 24px, 280px, 1920px)};
+  font-size: #{f.fluid(12px, 20px, 280px, 1920px)};
   font-weight: 700;
   text-transform: uppercase;
 }
