@@ -22,10 +22,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 
-  // @include m.respondMax(v.$screen-smallest) {
-  //   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  // }
-
   &__logo-box {
     position: absolute;
     top: f.rem(40px);
