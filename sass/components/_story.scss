@@ -74,7 +74,7 @@
 
     transition: all 0.5s;
 
-    @include m.respondMax(v.$screen-small) {
+    @include m.respondMax(v.$screen-medium) {
       filter: blur(3px) brightness(0.9);
       transform: translate(-50%, -50%) scale(1);
     }
@@ -105,13 +105,24 @@
     transition: all 0.5s;
     backface-visibility: hidden;
 
-    @include m.respondMax(v.$screen-small) {
+    @include m.respondMax(v.$screen-medium) {
       opacity: 1;
       transform: translate(-50%, -50%);
     }
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  // @media (hover: hover) and (pointer: fine) {
+  //   &:hover &__caption {
+  //     opacity: 1;
+  //     transform: translate(-50%, -50%);
+  //   }
+  //   &:hover &__img {
+  //     filter: blur(3px) brightness(0.9);
+  //     transform: translate(-50%, -50%) scale(1);
+  //   }
+  // }
+
+  @media screen and (min-width: 1201px) {
     &:hover &__caption {
       opacity: 1;
       transform: translate(-50%, -50%);
