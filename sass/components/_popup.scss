@@ -72,10 +72,12 @@
 
   &__right {
     width: 67%;
+    height: 100%;
     padding: f.rem(30px) f.rem(50px);
 
     @include m.respondMax(v.$screen-small) {
       width: 100%;
+      overflow-y: scroll;
     }
 
     @include m.respondMax(v.$screen-smallest) {

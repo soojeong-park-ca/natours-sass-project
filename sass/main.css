@@ -768,11 +768,13 @@ body {
 }
 .popup__right {
   width: 67%;
+  height: 100%;
   padding: 1.875rem 3.125rem;
 }
 @media (max-width: 56.25em) {
   .popup__right {
     width: 100%;
+    overflow-y: scroll;
   }
 }
 @media (max-width: 37.5em) {
