@@ -66,8 +66,6 @@
 
     @include m.respondMax(v.$screen-small) {
       width: 100%;
-      // justify-content: start;
-      // gap: f.rem(60px);
     }
 
     @include m.respondMax(v.$screen-smallest) {
