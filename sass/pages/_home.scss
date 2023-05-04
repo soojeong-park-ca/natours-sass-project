@@ -44,6 +44,7 @@
 
     @include m.respondMax(v.$screen-small) {
       grid-template-columns: 1fr;
+      max-width: f.rem(500px);
     }
   }
 
@@ -80,8 +81,22 @@
   padding-block: f.rem(250px) f.rem(70px);
   margin-top: f.rem(-90px);
 
+  & .col {
+    height: 100%;
+  }
+
+  @include m.respondMax(v.$screen-medium) {
+    & .grid {
+      column-gap: f.rem(30px);
+    }
+  }
+
   @include m.respondMax(v.$screen-small) {
     padding-block: f.rem(200px) f.rem(50px);
+
+    & .grid {
+      max-width: f.rem(500px);
+    }
   }
   @include m.respondMax(v.$screen-smallest) {
     padding-block: f.rem(180px) f.rem(30px);

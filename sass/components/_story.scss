@@ -66,7 +66,7 @@
     backface-visibility: hidden;
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover &__caption {
       opacity: 1;
       transform: translate(-50%, -50%);

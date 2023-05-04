@@ -126,7 +126,7 @@
       }
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover,
       &:active {
         background-position: 100%;
@@ -177,7 +177,7 @@
     }
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &__button:hover &__icon::before {
       top: f.rem(-10px);
     }

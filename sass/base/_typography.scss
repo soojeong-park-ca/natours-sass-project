@@ -67,7 +67,7 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: skew(15deg, 2deg) scale(1.1);
       text-shadow: f.rem(5px) f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);

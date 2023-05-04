@@ -6,14 +6,18 @@
   // FUNCTIONALITY
   perspective: f.rem(1500px);
   position: relative;
-  height: f.rem(520px);
+  height: f.rem(560px);
 
   &__side {
     width: 100%;
-    height: f.rem(520px);
+    height: 100%;
+
     position: absolute;
     top: 0;
     left: 0;
+
+    display: flex;
+    flex-direction: column;
 
     border-radius: v.$border-radius-small;
     overflow: hidden;
@@ -52,7 +56,7 @@
     }
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover &__side--front {
       transform: rotateY(-180deg);
     }
@@ -105,6 +109,15 @@
     text-transform: uppercase;
     color: v.$color-white;
     text-align: right;
+
+    @include m.respondMax(v.$screen-medium) {
+      & {
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
   }
 
   &__heading-span {
@@ -137,6 +150,12 @@
 
   &__details {
     padding: f.rem(30px);
+
+    @include m.respondMax(v.$screen-medium) {
+      & {
+        padding: f.rem(10px) f.rem(30px);
+      }
+    }
 
     ul {
       width: 80%;
@@ -174,5 +193,56 @@
   &__price-value {
     font-size: f.rem(60px);
     font-weight: 100;
+  }
+
+  ///////////////////////////////////////////////////
+  ///////////////////////////////////////////////////
+  // MEDIA QUERY FOR SCREEN <= 900PX
+  @include m.respondMax(v.$screen-small) {
+    & {
+      height: auto;
+      border-radius: 3px;
+      background-color: v.$color-white;
+      box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
+    }
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover &__side--front {
+        transform: rotateY(0);
+      }
+    }
+
+    // &__details {
+    //   padding: f.rem(10px) f.rem(30px);
+    // }
+
+    // BACK SIDE STYLING
+    &__cta {
+      width: 100%;
+
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      padding: f.rem(70px) f.rem(40px) f.rem(40px) f.rem(40px);
+    }
+
+    &__price-box {
+      margin-bottom: f.rem(30px);
+    }
+    &__price-value {
+      font-size: f.rem(40px);
+    }
   }
 }

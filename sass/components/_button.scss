@@ -28,7 +28,7 @@
     // }
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 f.rem(10px) f.rem(20px) rgba(v.$color-black, 0.2);
@@ -96,7 +96,7 @@
     transition: all 0.2s;
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: v.$color-primary;
       color: v.$color-white;

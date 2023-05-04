@@ -56,7 +56,7 @@
       }
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover {
         outline: 15px solid v.$color-primary;
         transform: scale(1.05) translateY((-5px));
@@ -67,7 +67,7 @@
     }
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover &__photo:not(:hover) {
       transform: scale(0.95);
     }
