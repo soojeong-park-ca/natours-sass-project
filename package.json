@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Landing page for Natours",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss css/style.css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css"
+  },
   "author": "Soojeong Park",
   "license": "ISC",
   "devDependencies": {
