@@ -1441,18 +1441,33 @@ body {
 }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 49.9%, transparent 50% 100%), url(../../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 49.9%, transparent 50% 100%), url(../../img/nat-10-small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 3px;
   box-shadow: 0 0.9375rem 2.5rem rgba(0, 0, 0, 0.2);
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 125em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 49.9%, transparent 50% 100%), url(../../img/nat-10.jpg);
+  }
+}
 @media (max-width: 75em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 64.9%, transparent 65% 100%), url(../../img/nat-10-small.jpg);
+  }
+}
+@media (max-width: 75em) and (-webkit-min-device-pixel-ratio: 2), (max-width: 75em) and (min-resolution: 192dpi) {
   .book {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0% 64.9%, transparent 65% 100%), url(../../img/nat-10.jpg);
   }
 }
 @media (max-width: 56.25em) {
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0% 100%), url(../../img/nat-10-small.jpg);
+  }
+}
+@media (max-width: 56.25em) and (-webkit-min-device-pixel-ratio: 2), (max-width: 56.25em) and (min-resolution: 192dpi) {
   .book {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0% 100%), url(../../img/nat-10.jpg);
   }
