@@ -141,12 +141,6 @@ body {
   letter-spacing: 2px;
   transition: all 0.2s;
 }
-@media (hover: hover) and (pointer: fine) {
-  .heading-secondary:hover {
-    transform: skew(15deg, 2deg) scale(1.1);
-    text-shadow: 0.3125rem 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-  }
-}
 
 .heading-tertiary {
   font-size: 1rem;
@@ -733,6 +727,13 @@ body {
   z-index: 3000;
   transition: all 0.3s;
 }
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .popup {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
 .popup__content {
   position: absolute;
   top: 50%;
@@ -793,7 +794,6 @@ body {
 }
 .popup__right {
   width: 67%;
-  height: 100%;
   padding: 1.875rem 3.125rem;
 }
 @media (max-width: 56.25em) {
@@ -908,8 +908,8 @@ body {
   height: 9.375rem;
   float: left;
   shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  border-radius: 50%;
+  overflow: hidden;
   transform: translateX(-1.875rem) skewX(12deg);
   position: relative;
 }
@@ -961,7 +961,7 @@ body {
     transform: translate(-50%, -50%);
   }
 }
-@media screen and (min-width: 1201px) {
+@media (hover: hover) and (pointer: fine), (min-width: 1201px) {
   .story:hover .story__caption {
     opacity: 1;
     transform: translate(-50%, -50%);
@@ -1115,12 +1115,17 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
 }
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
   .header {

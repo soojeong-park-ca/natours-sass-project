@@ -33,8 +33,6 @@
 
   @include m.respondMax(v.$screen-small) {
     tranform: skewX(12deg);
-    // padding: f.rem(40px);
-    // padding-left: f.rem(60px);
     padding: f.rem(40px);
     transform: skewX(0);
   }
@@ -55,7 +53,8 @@
 
     float: left;
     shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
+    overflow: hidden;
     transform: translateX(f.rem(-30px)) skewX(12deg);
     position: relative;
 
@@ -111,18 +110,7 @@
     }
   }
 
-  // @media (hover: hover) and (pointer: fine) {
-  //   &:hover &__caption {
-  //     opacity: 1;
-  //     transform: translate(-50%, -50%);
-  //   }
-  //   &:hover &__img {
-  //     filter: blur(3px) brightness(0.9);
-  //     transform: translate(-50%, -50%) scale(1);
-  //   }
-  // }
-
-  @media screen and (min-width: 1201px) {
+  @media (hover: hover) and (pointer: fine), (min-width: 1201px) {
     &:hover &__caption {
       opacity: 1;
       transform: translate(-50%, -50%);
