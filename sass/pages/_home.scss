@@ -69,10 +69,20 @@
         rgba(v.$color-primary-light, 0.8),
         rgba(v.$color-primary-dark, 0.8)
       ),
-      url(../img/nat-4.jpg);
+      url(../img/nat-4-small.jpg);
     background-size: cover;
 
     z-index: -1;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+      (min-width: 125em) {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(v.$color-primary-light, 0.8),
+          rgba(v.$color-primary-dark, 0.8)
+        ),
+        url(../img/nat-4.jpg);
+    }
   }
 }
 
