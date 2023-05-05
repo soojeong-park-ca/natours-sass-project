@@ -38,6 +38,15 @@
         url("../../img/hero-small.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            105deg,
+            rgba(v.$color-white, 0.9) 0% 69.9%,
+            transparent 70% 100%
+          ),
+          url("../../img/hero.jpg");
+      }
     }
 
     @include m.respondMax(v.$screen-small) {
@@ -51,6 +60,14 @@
           rgba(v.$color-white, 0.9) 0% 100%
         ),
         url("../../img/hero-small.jpg");
+
+      @media (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to right,
+            rgba(v.$color-white, 0.9) 0% 100%
+          ),
+          url("../../img/hero.jpg");
+      }
     }
 
     @include m.respondMax(v.$screen-small) {
