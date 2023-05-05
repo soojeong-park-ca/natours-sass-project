@@ -6,7 +6,6 @@ This is a landing page website for a fictional tour company called "Natours"
 
 - [Overview](#overview)
   - [Features](#features)
-  - [Screenshots](#screenshots)
   - [Demo Link](#demo-link)
 - [About the Project](#about-the-project)
   - [Motivation](#motivation)
@@ -30,21 +29,15 @@ Some features from the website :
 - **Custom Checkbox Input** used to make navigation menu;
 - Some JS functions for testimonial slider, navigation, and opening / closing modal popups using Vanilla Js
 
-### Screenshots
-
-desktop version :
-
-<img src="" width="250"/>
-
 ### Demo Link
 
-**[💻 Live Site URL](https://)**
+**[💻 Live Site URL](https://spark-natour.netlify.app/)**
 
 ## About the Project
 
 ### Motivation
 
-Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and SASS course](https://www.udemy.com/course/advanced-css-and-sass/). I changed parts of his design and added extra features to the website for my first ever personal SASS project.
+Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and SASS course](https://www.udemy.com/course/advanced-css-and-sass/). I changed and added extra features / functions to the website for my first ever personal SASS project.
 
 ### Tech Framework Used
 
@@ -55,9 +48,9 @@ Natours is originally designed by Jonas Schmedtmann from his [Advanced CSS and S
 
 ### Reflection
 
-This was a fun and exciting app to create especially because I had to build everything from scratch. I learned a lot while I was creating multiple React components and using data across the components to make the app work. Working with props was the main way I accomplished moving data from one component to another.
+This was a first SASS project I built. Since I've always been using CSS3, SASS syntax wasn't too difficult to learn. I enjoyed how structured it was to use SASS. I also enjoyed using mixins and functions which made the code more dry and organized.
 
-One of the challenges I ran into was making the score system work. It required me to decide the logic for choosing and unchoosing the option from each question so that I could update the individual and overall score of the quiz depending on the choices a user might make.
+The most challening part was to figure out the SASS build process, however, since I've used packages and the json script in the past. It was very intuitive to write the SASS build script and finally turn all the SASS files into a CSS single compact CSS file.
 
 Some new things I learned while building this website/app are:
 
@@ -66,7 +59,7 @@ Some new things I learned while building this website/app are:
 - CSS properties: **`clip-path`** | **`background-clip`** | **`shape-outside`** | **`column-count`**
 - CSS functions: **`circle(<shape-radius> at <position>)`** | **`transform: skew()`**
 
-I look forward to ...
+I look forward to using SASS more in the future with my projects!
 
 ## Author
 
