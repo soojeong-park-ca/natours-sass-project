@@ -23,9 +23,6 @@
     // STYLE FOR <button> ELEMENT
     border: none;
     cursor: pointer;
-
-    // @include m.respondMax(v.$screen-smallest) {
-    // }
   }
 
   @media (hover: hover) and (pointer: fine) {

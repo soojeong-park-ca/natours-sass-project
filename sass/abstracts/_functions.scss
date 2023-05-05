@@ -7,6 +7,9 @@
 }
 
 // fluid typography using clamp(), args in pixels
+// examples:
+// font-size: #{fluid(16px, 32px, 320px, 960px)}
+// font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
 @function fluid(
   $min-size,
   $max-size,
@@ -27,6 +30,4 @@
   );
 }
 
-// examples:
-// font-size: #{fluid(16px, 32px, 320px, 960px)}
-// font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+

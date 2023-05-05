@@ -2,10 +2,6 @@
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
 
-* {
-  // outline: 1px solid red;
-}
-
 *,
 *::before,
 *::after {

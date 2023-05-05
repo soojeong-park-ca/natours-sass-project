@@ -333,7 +333,7 @@ body {
 .card__side--back-3 {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
 }
-@media screen and (min-width: 901px) {
+@media (hover: hover) and (pointer: fine), (min-width: 901px) {
   .card:hover .card__side--front {
     transform: rotateY(-180deg);
   }

@@ -56,16 +56,7 @@
     }
   }
 
-  // @media (hover: hover) and (pointer: fine) {
-  //   &:hover &__side--front {
-  //     transform: rotateY(-180deg);
-  //   }
-  //   &:hover &__side--back {
-  //     transform: rotateY(0);
-  //   }
-  // }
-
-  @media screen and (min-width: 901px) {
+  @media (hover: hover) and (pointer: fine), (min-width: 901px) {
     &:hover &__side--front {
       transform: rotateY(-180deg);
     }
