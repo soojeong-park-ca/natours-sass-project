@@ -56,7 +56,8 @@
     }
   }
 
-  @media (hover: hover) and (pointer: fine), (min-width: 901px) {
+  @media screen and (hover: hover) and (pointer: fine),
+    screen and (min-width: 901px) {
     &:hover &__side--front {
       transform: rotateY(-180deg);
     }
@@ -228,13 +229,11 @@
   ///////////////////////////////////////////////////
   ///////////////////////////////////////////////////
   // MEDIA QUERY FOR SCREEN <= 900PX
-  @include m.respondMax(v.$screen-small) {
-    & {
-      height: auto;
-      border-radius: 3px;
-      background-color: v.$color-white;
-      box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
-    }
+  @media screen and (max-width: 56.25em), screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: v.$color-white;
+    box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.15);
 
     &__side {
       height: auto;
@@ -247,10 +246,8 @@
       }
     }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover &__side--front {
-        transform: rotateY(0);
-      }
+    &:hover &__side--front {
+      transform: rotateY(0);
     }
 
     // BACK SIDE STYLING

@@ -24,7 +24,8 @@
 
   // Responsive image for screen solutions >= 192dpi
   // OR Responsive image for screen widths >= 2000px
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    screen and (min-width: 125em) {
     background-image: linear-gradient(
         to right bottom,
         rgba(v.$color-primary-light, 0.8),

@@ -34,7 +34,7 @@
     }
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @media screen and (hover: hover) and (pointer: fine) {
     &:hover {
       transform: translateY(f.rem(-15px)) scale(1.03);
     }

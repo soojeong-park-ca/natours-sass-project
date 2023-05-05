@@ -10,13 +10,13 @@
 // MEDIA QUERY MANAGER
 
 @mixin respondMax($breakpoint) {
-  @media (max-width: calc(calc($breakpoint / 16px) * 1em)) {
+  @media screen and (max-width: calc(calc($breakpoint / 16px) * 1em)) {
     @content;
   }
 }
 
 @mixin respondMin($breadkpoint) {
-  @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
+  @media screen and (min-width: calc(calc($breakpoint / 16px) * 1em)) {
     @content;
   }
 }

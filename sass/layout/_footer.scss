@@ -76,7 +76,7 @@
       transition: all 0.2s;
     }
 
-    @media (hover: hover) and (pointer: fine) {
+    @media screen and (hover: hover) and (pointer: fine) {
       &:hover {
         color: v.$color-primary;
       }

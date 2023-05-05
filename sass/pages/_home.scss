@@ -74,7 +74,7 @@
 
     z-index: -1;
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
       (min-width: 125em) {
       background-image: linear-gradient(
           to right bottom,
@@ -91,7 +91,7 @@
   padding-block: f.rem(250px) f.rem(70px);
   margin-top: f.rem(-90px);
 
-  & .col {
+  & .grid .col {
     height: 100%;
   }
 
@@ -156,7 +156,7 @@
   border-radius: v.$border-radius-small;
   box-shadow: 0 f.rem(15px) f.rem(40px) rgba(v.$color-black, 0.2);
 
-  @media (min-resolution: 192dpi), (min-width: 125em) {
+  @media screen and (min-resolution: 192dpi), screen and (min-width: 125em) {
     background-image: linear-gradient(
         105deg,
         rgba(v.$color-white, 0.9) 0% 49.9%,
@@ -173,7 +173,7 @@
       ),
       url(../../img/nat-10-small.jpg);
 
-    @media (min-resolution: 192dpi) {
+    @media screen and (min-resolution: 192dpi) {
       background-image: linear-gradient(
           105deg,
           rgba(v.$color-white, 0.9) 0% 64.9%,
@@ -190,7 +190,7 @@
       ),
       url(../../img/nat-10-small.jpg);
 
-    @media (min-resolution: 192dpi) {
+    @media screen and (min-resolution: 192dpi) {
       background-image: linear-gradient(
           to right,
           rgba(v.$color-white, 0.9) 0% 100%

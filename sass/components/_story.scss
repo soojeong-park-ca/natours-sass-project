@@ -32,7 +32,7 @@
   }
 
   @include m.respondMax(v.$screen-small) {
-    tranform: skewX(12deg);
+    transform: skewX(12deg);
     padding: f.rem(40px);
     transform: skewX(0);
   }
@@ -110,7 +110,8 @@
     }
   }
 
-  @media (hover: hover) and (pointer: fine), (min-width: 1201px) {
+  @media screen and (hover: hover) and (pointer: fine),
+    screen and (min-width: 1201px) {
     &:hover &__caption {
       opacity: 1;
       transform: translate(-50%, -50%);
